@@ -52,3 +52,45 @@
 .hvr-pulse {
 	display: flex !important;
 }
+
+/*------------PROFILE PAGE---------------------*/
+.img-side{
+	width: 30%;
+	float: left;
+	display: inline;
+	margin-right: 100px;
+}
+
+.company-logo{
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
+	margin-left: 100px;
+	margin-top: 30px;
+	display: flex;
+}
+.upload-img{
+	width: 150px;
+	margin: 30px 150px;
+}
+
+.details-side{
+	width: 45%;
+	float: left;
+	display: inline;
+	margin: auto;
+}
+
+.company-details{
+	color: #CCC;
+	text-align: center;
+	padding-bottom: 50px;
+}
+.company-detail{
+	color: gold;
+	font-size: 22px;
+}
+.edit-profile{
+	width: 150px;
+	float: right;
+}
