@@ -153,3 +153,22 @@ footer {
     width: 50%;
     float: right;
 }
+
+/*-------------------------------Companies page----------------------------*/
+.accordion{
+	width: 36%;
+    float: left;
+    height: 290px;
+}
+#map{
+   float:right;
+   width: 600px;
+   height: 290px;
+
+    }  
+.container-off{
+    width: 85%;
+    margin: auto;
+    min-height: 300px;
+    border: 1px solid gray;
+}
