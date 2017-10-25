@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Booking</title>
+	<title>Services</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -22,8 +22,8 @@
 			</div>
 			<ul class="nav navbar-nav">
 				<li><a href="profile.html">Profile</a></li>
-				<li><a href="offices.html">Offices</a></li>
-				<li class='active'><a href="#">Booking</a></li>
+				<li class='active'><a href="offices.html">Offices</a></li>
+				<li><a href="booking.html">Booking</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">LogOut<i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
@@ -31,24 +31,28 @@
 		</div>
 	</nav>
 	<div class='content'>
-		<h1 class='company-details'>Booking list</h1>
+		<h1 class='company-details'>Company's Offices</h1>
+		<button class='add' onclick="document.getElementById('add-serv').style.display='block'">Add service</button>
 		<table class='table table-hover'>
 			<thead>
 			    <tr>
 				    <th>Nr.Crt.</th>
-				    <th>Office</th>
-				    <th>Service</th>
-				    <th>Date</th>
-				    <th>Client Name</th>
+				    <th>Service's name</th>
+				    <th>Price</th>
+				    <th>Duration</th>
+				    <th></th>
 			    </tr>
 			</thead>
 			<tbody>
 			    <tr>
 			        <td>John</td>
 			        <td>Doe</td>
-			        <td>john@example.com</td>
+			        <td>John</td>
 			        <td>Doe</td>
-			        <td>john@example.com</td>
+			        <td>
+			        	<i class="fa fa-pencil edit" aria-hidden="true"></i>
+			        	<i class="fa fa-trash edit" aria-hidden="true"></i>
+			        </td>
 			    </tr>
 			</tbody>
   		</table>
@@ -56,5 +60,26 @@
 	<footer>
 		<p>Copyright by BookingApp</p>
 	</footer>
+	<div id="add-serv" class="modal">
+	  	<form class="modal-content animate">
+	  		<span onclick="document.getElementById('add-serv').style.display='none'" class="close" title="Close Modal">×</span>
+	    	<div class="container">
+	    		<h1 style='text-align: center;'>Add service</h1>
+	    		<label><b>Service's name</b></label>
+			    <input type="text" placeholder="Enter service's name" name="serv-name" required>
+
+			    <label><b>Price</b></label>
+			    <input type="text" name="serv-price" required>
+
+			    <label><b>Duration</b></label>
+			    <input type="text" name="serv-duration" required>
+
+			    <div class="clearfix">
+			        <button type="button" onclick="document.getElementById('add-serv').style.display='none'" class="exit-modal">Cancel</button>
+			        <button type="submit" class="add-btn">Add service</button>
+			    </div>
+		    </div>
+	  </form>
+	</div>
 </body>
 </html>

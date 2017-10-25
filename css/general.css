@@ -29,6 +29,15 @@
 	width: 70%;
 	margin: 0 auto;
 }
+footer {
+	width: 100%;
+	background-color: #222;
+	color: #9d9d9d; 
+	height: 50px;
+	text-align: center;
+	padding-top: 20px;
+	margin-top: 300px;
+}
 
 /*-----------------------CARDS--------------------*/
 .hvr-pulse .waves-effect{
@@ -66,12 +75,12 @@
 	width: 250px;
 	height: 250px;
 	margin-left: 100px;
-	margin-top: 30px;
+	margin-top: 100px;
 	display: flex;
 }
 .upload-img{
 	width: 150px;
-	margin: 30px 150px;
+	margin: 50px 150px;
 }
 
 .details-side{
@@ -85,6 +94,7 @@
 	color: #CCC;
 	text-align: center;
 	padding-bottom: 50px;
+	margin-top: 100px;
 }
 .company-detail{
 	color: gold;
@@ -102,4 +112,44 @@
 
 .table td {
 	font-size: 15px;
+}
+
+/*-----------------------OFFICES PAGE---------------------------*/
+
+.add {
+	background: #d28ea2;
+	color: #fff;
+	font-weight: 500;
+	width: 150px;
+	float: right;
+	margin-bottom: 30px;
+}
+
+.more {
+	width: 100px;
+	font-weight: 400;
+	background-color: blue;
+	color: #fff;
+	font-size: 12px;
+	height: 40px;
+	cursor: pointer;
+	margin-top: auto;
+}
+
+.edit {
+	padding-right: 30px;
+	font-size: 25px;
+	color: #9c9c9c;
+	cursor: pointer;
+}
+
+.edit:hover {
+	color: #6d6d6d;
+}
+
+.add-btn {
+	padding: 14px 20px;
+    background-color: #4caf50;
+    width: 50%;
+    float: right;
 }
