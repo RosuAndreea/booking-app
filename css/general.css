@@ -172,3 +172,21 @@ footer {
     min-height: 300px;
     border: 1px solid gray;
 }
+/*----------------------------Booking register page--------------------*/
+.form {
+	width: 60%;
+	margin: auto;
+}
+.button{
+	width: 150px;
+	background-color: #fab6ac;
+	color: #fff;
+}
+.btn-right {
+	float: right;
+}
+.buttons-next {
+	width: 70%;
+	margin: auto;
+	margin-top: 20px;
+}

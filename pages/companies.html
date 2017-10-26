@@ -76,7 +76,7 @@
 	</div>
 
 	<!-- Services page -->
-	<div class='wrapper' id='select-serv'>
+	<!-- <div class='wrapper' id='select-serv'>
 		<div class='content'>
 			<ol class="breadcrumb">
 				<li class='breadcrumb-item'>Office</li>
@@ -90,10 +90,10 @@
 				</span>
 		    </div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- Calendar page -->
-	<div class='wrapper' id='select-date'>
+	<!-- <div class='wrapper' id='select-date'>
 		<div class='content'>
 			<ol class='breadcrumb'>
 				<li class='breadcrumb-item'>Office</li>
@@ -118,12 +118,43 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- Registration page -->
 
 	<div class='wrapper' id='details-cont'>
 		<div class='content'>
+			<ol class='breadcrumb'>
+				<li class='breadcrumb-item'>Office</li>
+				<li class='breadcrumb-item'>Service</li>
+				<li class='breadcrumb-item'>Date and time</li>
+				<li class='breadcrumb-item active'>Register</li>
+			</ol>
+			<div class='about-booking'>
+				<h1 class='company-details'>Booking details</h1>
+				<ul class='details-list-form'></ul>
+			</div>
+			<div class='form'>
+				<h1 class='company-details'>Register</h1>
+				<div class='booking-registration'>
+					<label><b>First Name</b></label>
+					<input type='text' placeholder='Enter your first name' name='booking-fname' required></input>
+					<label><b>Last Name</b></label>
+					<input type='text' placeholder='Enter your last name' name='booking-lname' required></input>
+					<label><b>Email</b></label>
+					<input type='text' placeholder='Enter your email' name='booking-email' required></input>
+					<label><b>Phone</b></label>
+					<input type='text' placeholder='Enter your phone' name='booking-phone' required></input>
+				</div>
+			</div>
+			<div class="buttons-next">
+				<span class="btn-left">
+					<button class="button">Back</button>
+				</span>
+				<span class="btn-right">
+					<button class="button">Continue</button>
+				</span>
+			</div>
 
 		</div>
 	</div>
@@ -203,5 +234,9 @@
 		    }
 		}
 	</script>
+	<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.9.2.custom.min.js"></script>
+	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgdmiOP7pJuWv-plWospEgy-PTZrggZak"></script>
+	<script type="text/javascript" src="../js/ui.js"></script>
 </body>
 </html>
