@@ -1,0 +1,22 @@
+{
+  "name": "booking-app",
+  "version": "1.0.0",
+  "description": "BookingApp API",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alupoaeiandreea/booking-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alupoaeiandreea/booking-app/issues"
+  },
+  "homepage": "https://github.com/alupoaeiandreea/booking-app#readme",
+  "dependencies": {
+    "json-server": "^0.12.1"
+  }
+}
