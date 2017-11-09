@@ -2,41 +2,30 @@
     "users":[
         {
             "id":"1",
-            "firstName":"Ana",
-            "lastName":"Maria",
+            "name":"Maria",
             "email":"ana-maria@yahoo.com",
-            "password":"Demo123"
+            "password":"Demo123",
+            "address":"SV",
+            "phone":"0756891756",
+            "details":"Something vnioghk"
         },
         {
             "id":"2",
-            "firstName":"Mihai",
-            "lastName":"Vasile",
+            "name":"Vasile",
             "email":"mihai22@yahoo.com",
-            "password":"Demo123"
+            "password":"Demo123",
+            "address":"SV",
+            "phone":"0756891756",
+            "details":"Something vnioghk"
         },
         {
             "id":"3",
-            "firstName":"Cosmina",
-            "lastName":"Petronela",
+            "name":"Petronela",
             "email":"cosmina.petro@yahoo.com",
-            "password":"Demo123"
-        }
-    ],
-    "companies":[
-        {
-            "id":"1",
-            "name":"Apple",
-            "description":"Something here vfmdfno bndfiobn  bhviudf"
-        },
-        {
-            "id":"2",
-            "name":"Assist",
-            "description":"Something else will go here vfmdfno bndfiobn  bhviudf"
-        },
-        {
-            "id":"3",
-            "name":"Microsoft",
-            "description":"Something lese X 2 will be here vfmdfno bndfiobn  bhviudf"
+            "password":"Demo123",
+            "address":"SV",
+            "phone":"0756891756",
+            "details":"Something vnioghk"
         }
     ]
 }
