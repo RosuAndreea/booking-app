@@ -6,9 +6,13 @@ $(function (){
    var $servTime = $('#add-serv-time');
 
    function addService (service) {
-        $services.append('<td><span>' + services.serviceName + '<span></td>'
-                        +'<td>' + services.servicePrice + '</td>'
-                        +'<td>' + services.serviceTime + '</td>'
+        $services.append('<td><span>' + services.id + '</span><td>' 
+                        +'<td><span class="noedit serv-name"' + services.serviceName + '</span><input class="edit-input serv-name"/></td>' 
+                        +'<td><span class="noedit price"' + services.servicePrice + '</span><input class="edit-input price"/></td>'
+                        +'<td><span class="noedit time"' + services.serviceTime + '</span><input class="edit-input time"/></td>'
+                        +'<td><i class="fa fa-pencil edit noedit edit-serv" aria-hiddesn="true"></i>'
+                        +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="{{id}}"></i>'
+                        +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>'
         );
    }
 
