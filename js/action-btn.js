@@ -1,6 +1,31 @@
 $(function (){
    var $serviceData = $('tbody');
+   var $servName = $('#add-serv-name');
+   var $servPrice = $('#add-serv-price');
+   var $servTime = $('#add-serv-time');
+
    console.log('hi');
+   
+// add service
+    $('.add-btn').on('click',function (){
+        var services = {
+            serviceName: $servName.val(),
+            servicePrice: $servPrice.val(),
+            serviceTime: $servTime.val()
+        };
+
+        $.ajax({
+            type: "POST",
+            url: '/db/services',
+            success: function () {
+                alert('You create a new service with success!');
+            },
+            error: function () {
+                alert('Error');
+            }
+        });
+    });
+
 
 //    delete services
     $serviceData.delegate('.remove-serv','click', function(){
