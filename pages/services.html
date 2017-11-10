@@ -10,9 +10,6 @@
 	<link rel="stylesheet" href="../css/general.css">
 	<link rel="stylesheet" href="../css/hover.css">
 	<link rel="stylesheet" href="../css/login.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js'></script>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -44,14 +41,26 @@
 			    </tr>
 			</thead>
 			<tbody>
-			    <tr>
-			        <td>John</td>
-			        <td>Doe</td>
-			        <td>John</td>
-			        <td>Doe</td>
+			    <tr class='services-data'>
 			        <td>
-			        	<i class="fa fa-pencil edit edit-serv" aria-hidden="true" data-id='{{id}}'></i>
-			        	<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id='{{id}}'></i>
+						<span>1.</span>
+					</td>
+			        <td>
+						<span class='noedit serv-name'>John</span>
+						<input class='edit-input serv-name'/>
+					</td>
+			        <td>
+						<span class='noedit price'>22$</span>
+						<input class='edit-input price'/>
+					</td>
+			        <td>
+						<span class='noedit time'>3h</span>
+						<input class='edit-input time'/>	
+					</td>
+			        <td>
+			        	<i class="fa fa-pencil edit noedit edit-serv" aria-hidden="true"></i>
+						<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id='{{id}}'></i>
+						<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>
 			        </td>
 			    </tr>
 			</tbody>
@@ -81,5 +90,11 @@
 		    </div>
 	  </form>
 	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js'></script>
+	<script src='../js/main.js'></script>
+	<script src='../js/action-btn.js'></script>
 </body>
 </html>

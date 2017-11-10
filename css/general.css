@@ -154,6 +154,19 @@ footer {
     float: right;
 }
 
+tbody .services-data .edit-input {
+	display: none;
+}
+
+tbody .services-data.edit-input .edit-input{
+	display: initial;
+}
+
+tbody .services-data.edit-input .noedit{
+	display: none;
+}
+
+
 /*-------------------------------Companies page----------------------------*/
 .accordion{
 	width: 36%;
