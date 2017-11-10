@@ -13,6 +13,7 @@ $(function (){
                         +'<td><i class="fa fa-pencil edit noedit edit-serv" aria-hiddesn="true"></i>'
                         +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="{{id}}"></i>'
                         +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>'
+                        +'<i class="fa fa-times edit-input edit remove-edit" aria-hidden="true"></i>'
         );
    }
 
@@ -83,6 +84,34 @@ $(function (){
         console.log('hi');
         
     });   
-    
+     
+    // remove edit
+    $services.delegate('.remove-edit','click', function(){
+        $(this).closest('.services-data').removeClass('edit-input');
+    });  
 
+    // save edit
+    $services.delegate('.save-serv', 'click', function () {
+        var $td = $(this).closest('.services-data');
+        var services = {
+            serviceName: $td.find('input.serv-name').val(),
+            servicePrice: $td.find('input.price').val(),
+            serviceTime: $td.find('input.time').val()
+        };
+        $.ajax({
+            type: "PUT",
+            url: '/db/services' + $td.attr('data-id'),
+            data: services,
+            success: function (newService) {
+                $td.find('span.serv-name').html(service.serviceName);
+                $td.find('span.price').html(service.servicePrice);
+                $td.find('span.time').html(service.serviceTime);
+                $td.removeClass('edit-input');
+                alert('You create a new service with success!');
+            },
+            error: function () {
+                alert('Error updating service');
+            }
+        });
+    });
 });
