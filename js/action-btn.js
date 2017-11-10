@@ -1,11 +1,32 @@
 $(function (){
    var $serviceData = $('tbody');
+   var $sevices = $('.services-data');
    var $servName = $('#add-serv-name');
    var $servPrice = $('#add-serv-price');
    var $servTime = $('#add-serv-time');
 
-   console.log('hi');
-   
+   function addService (service) {
+        $services.append('<td><span>' + services.serviceName + '<span></td>'
+                        +'<td>' + services.servicePrice + '</td>'
+                        +'<td>' + services.serviceTime + '</td>'
+        );
+   }
+
+// take the data from db/services
+    $.ajax({
+        type: "GET",
+        url: 'db/services',
+        success: function (services){
+            $.each(services, function (i, service){
+                addOrder(order);
+            });
+        },
+        error: function (){
+            alert('Error loading services');
+        }
+
+    });
+
 // add service
     $('.add-btn').on('click',function (){
         var services = {
@@ -17,19 +38,21 @@ $(function (){
         $.ajax({
             type: "POST",
             url: '/db/services',
-            success: function () {
+            data: services,
+            success: function (newService) {
+                addOrder(newService);
                 alert('You create a new service with success!');
             },
             error: function () {
-                alert('Error');
+                alert('Error saving the service');
             }
         });
     });
 
 
 //    delete services
-    $serviceData.delegate('.remove-serv','click', function(){
-        var $tr = $(this).closest('.service-data');
+    $services.delegate('.remove-serv','click', function(){
+        var $td = $(this).closest('.service-data');
         var self = this;
         console.log('fer');
 
@@ -37,7 +60,8 @@ $(function (){
             type: 'DELETE',
             url: '/db/services/' + $(this).attr('data-id'),
             success: function (){
-                $tr.fadeOut(300, function(){
+                $(self);
+                $td.fadeOut(300, function(){
                     $(this).remove();
                 });
             }
@@ -46,12 +70,12 @@ $(function (){
     });   
     
     // edit services
-    $serviceData.delegate('.edit-serv','click', function(){
-        var $tr = $(this).closest('.services-data');
-        $tr.find('input.serv-name').val( $tr.find('span.serv-name').html() );
-        $tr.find('input.price').val( $tr.find('span.price').html() );
-        $tr.find('input.time').val( $tr.find('span.time').html() );
-        $tr.addClass('edit-input');
+    $services.delegate('.edit-serv','click', function(){
+        var $td = $(this).closest('.services-data');
+        $td.find('input.serv-name').val( $td.find('span.serv-name').html() );
+        $td.find('input.price').val( $td.find('span.price').html() );
+        $td.find('input.time').val( $td.find('span.time').html() );
+        $td.addClass('edit-input');
         console.log('hi');
         
     });   

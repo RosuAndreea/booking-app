@@ -27,5 +27,14 @@
             "phone":"0756891756",
             "details":"Something vnioghk"
         }
+    ],
+    "services":[
+        {
+            "id":"1",
+            "company-id":"1",
+            "serviceName":"curatatorie",
+            "servicePrice":"22$",
+            "serviceTime":"3h"
+        }
     ]
 }
