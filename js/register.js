@@ -1,4 +1,4 @@
-$(function(){
+(function(){
 
     var $email = $('#email');
     var $psw = $('#psw');
@@ -28,4 +28,4 @@ $(function(){
         });
     });
 
-});
+})();

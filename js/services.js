@@ -1,15 +1,17 @@
-$(function (){
+(function (){
    var $serviceData = $('tbody');
-   var $sevices = $('.services-data');
+   var $services = $('.services-data');
    var $servName = $('#add-serv-name');
    var $servPrice = $('#add-serv-price');
    var $servTime = $('#add-serv-time');
+   var ApiUrl = window.ApiUrl;
+
 
    function addService (service) {
-        $services.append('<td><span>' + services.id + '</span><td>' 
-                        +'<td><span class="noedit serv-name"' + services.serviceName + '</span><input class="edit-input serv-name"/></td>' 
-                        +'<td><span class="noedit price"' + services.servicePrice + '</span><input class="edit-input price"/></td>'
-                        +'<td><span class="noedit time"' + services.serviceTime + '</span><input class="edit-input time"/></td>'
+    $services.append('<td><span>' + service.id + '</span><td>' 
+                        +'<td><span class="noedit serv-name"' + service.serviceName + '</span><input class="edit-input serv-name"/></td>' 
+                        +'<td><span class="noedit price"' + service.servicePrice + '</span><input class="edit-input price"/></td>'
+                        +'<td><span class="noedit time"' + service.serviceTime + '</span><input class="edit-input time"/></td>'
                         +'<td><i class="fa fa-pencil edit noedit edit-serv" aria-hiddesn="true"></i>'
                         +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="{{id}}"></i>'
                         +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>'
@@ -20,14 +22,19 @@ $(function (){
 // take the data from db/services
     $.ajax({
         type: "GET",
-        url: 'db/services',
+        url: ApiUrl + 'services',
+        // headers: {
+        //     "Access-Control-Allow-Origin": "*"
+        // },
         success: function (services){
+            console.log('services ', services)
             $.each(services, function (i, service){
-                addOrder(order);
+                addService(service);
             });
         },
-        error: function (){
-            alert('Error loading services');
+        error: function (err){
+            console.log('Err ', err);
+            //alert('Error loading services');
         }
 
     });
@@ -42,10 +49,10 @@ $(function (){
 
         $.ajax({
             type: "POST",
-            url: '/db/services',
+            url: ApiUrl + 'services',
             data: services,
             success: function (newService) {
-                addOrder(newService);
+                addService(newService);
                 alert('You create a new service with success!');
             },
             error: function () {
@@ -63,7 +70,7 @@ $(function (){
 
         $.ajax({
             type: 'DELETE',
-            url: '/db/services/' + $(this).attr('data-id'),
+            url: ApiUrl + 'services' + $(this).attr('data-id'),
             success: function (){
                 $(self);
                 $td.fadeOut(300, function(){
@@ -100,7 +107,7 @@ $(function (){
         };
         $.ajax({
             type: "PUT",
-            url: '/db/services' + $td.attr('data-id'),
+            url: ApiUrl + 'services' + $td.attr('data-id'),
             data: services,
             success: function (newService) {
                 $td.find('span.serv-name').html(service.serviceName);
@@ -114,4 +121,4 @@ $(function (){
             }
         });
     });
-});
+})();

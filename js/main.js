@@ -1,10 +1,4 @@
-$(function (){
-    $.ajax({
-        type:'GET',
-        url: 'db',
-        success: function(data){
-            console.log("main.js file", data);
-        }
-    });
+(function (){
+   window.ApiUrl = "http://localhost:3000/";
 
-});
+})();

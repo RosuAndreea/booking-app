@@ -1,5 +1,5 @@
 {
-    "users":[
+    "companies":[
         {
             "id":"1",
             "name":"Maria",
@@ -31,7 +31,7 @@
     "services":[
         {
             "id":"1",
-            "company-id":"1",
+            "companyId":"1",
             "serviceName":"curatatorie",
             "servicePrice":"22$",
             "serviceTime":"3h"
