@@ -58,6 +58,12 @@
       "servicePrice": "22$",
       "serviceTime": "5h",
       "id": "zaV__7D"
+    },
+    {
+      "serviceName": "name",
+      "servicePrice": "50E",
+      "serviceTime": "40min",
+      "id": "vuCTrsa"
     }
   ]
 }
