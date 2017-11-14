@@ -8,14 +8,16 @@
 
 
    function addService (service) {
-    $services.append('<td><span>' + service.id + '</span></td>' 
+    $serviceData.append('<tr class="services-data">'
+                    +'<td><span>' + service.id + '</span></td>' 
                     +'<td><span class="noedit serv-name">' + service.serviceName + '</span><input class="edit-input serv-name"/></td>' 
                     +'<td><span class="noedit price">' + service.servicePrice + '</span><input class="edit-input price"/></td>'
                     +'<td><span class="noedit time">' + service.serviceTime + '</span><input class="edit-input time"/></td>'
                     +'<td><i class="fa fa-pencil edit noedit edit-serv" aria-hiddesn="true"></i>'
                     +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="{{id}}"></i>'
                     +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>'
-                    +'<i class="fa fa-times edit-input edit remove-edit" aria-hidden="true"></i>'
+                    +'<i class="fa fa-times edit-input edit remove-edit" aria-hidden="true"></i></td>'
+                    +'</tr>'
     );
    }
 
@@ -63,7 +65,7 @@
 
 
 //    delete services
-    $services.delegate('.remove-serv','click', function(){
+   $services.delegate('.remove-serv','click', function(){
         var $td = $(this).closest('.service-data');
         var self = this;
         console.log('fer');
@@ -82,38 +84,38 @@
     });   
     
     // edit services
-    $services.delegate('.edit-serv','click', function(){
-        var $td = $(this).closest('.services-data');
-        $td.find('input.serv-name').val( $td.find('span.serv-name').html() );
-        $td.find('input.price').val( $td.find('span.price').html() );
-        $td.find('input.time').val( $td.find('span.time').html() );
-        $td.addClass('edit-input');
+    $serviceData.delegate('.edit-serv','click', function(){
+        var $tr = $(this).closest('.services-data');
+        $tr.find('input.serv-name').val( $tr.find('span.serv-name').html() );
+        $tr.find('input.price').val( $tr.find('span.price').html() );
+        $tr.find('input.time').val( $tr.find('span.time').html() );
+        $tr.addClass('edit-input');
         console.log('hi');
         
     });   
      
     // remove edit
-    $services.delegate('.remove-edit','click', function(){
+    $serviceData.delegate('.remove-edit','click', function(){
         $(this).closest('.services-data').removeClass('edit-input');
     });  
 
     // save edit
-    $services.delegate('.save-serv', 'click', function () {
-        var $td = $(this).closest('.services-data');
+    $serviceData.delegate('.save-serv', 'click', function () {
+        var $tr = $(this).closest('.services-data');
         var services = {
-            serviceName: $td.find('input.serv-name').val(),
-            servicePrice: $td.find('input.price').val(),
-            serviceTime: $td.find('input.time').val()
+            serviceName: $tr.find('input.serv-name').val(),
+            servicePrice: $tr.find('input.price').val(),
+            serviceTime: $tr.find('input.time').val()
         };
         $.ajax({
             type: "PUT",
-            url: ApiUrl + 'services' + $td.attr('data-id'),
+            url: ApiUrl + 'services' + $tr.attr('data-id'),
             data: services,
             success: function (newService) {
-                $td.find('span.serv-name').html(service.serviceName);
-                $td.find('span.price').html(service.servicePrice);
-                $td.find('span.time').html(service.serviceTime);
-                $td.removeClass('edit-input');
+                $tr.find('span.serv-name').html(service.serviceName);
+                $tr.find('span.price').html(service.servicePrice);
+                $tr.find('span.time').html(service.serviceTime);
+                $tr.removeClass('edit-input');
                 alert('You create a new service with success!');
             },
             error: function () {

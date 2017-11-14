@@ -1,50 +1,63 @@
 {
-    "companies":[
-        {
-            "id":"1",
-            "name":"Maria",
-            "email":"ana-maria@yahoo.com",
-            "password":"Demo123",
-            "address":"SV",
-            "phone":"0756891756",
-            "details":"Something vnioghk"
-        },
-        {
-            "id":"2",
-            "name":"Vasile",
-            "email":"mihai22@yahoo.com",
-            "password":"Demo123",
-            "address":"SV",
-            "phone":"0756891756",
-            "details":"Something vnioghk"
-        },
-        {
-            "id":"3",
-            "name":"Petronela",
-            "email":"cosmina.petro@yahoo.com",
-            "password":"Demo123",
-            "address":"SV",
-            "phone":"0756891756",
-            "details":"Something vnioghk"
-        }
-    ],
-    "offices":[
-        {
-            "id":"1",
-            "companyId":"1",
-            "officeName":"Office1",
-            "officeEmail":"email@yahoo.com",
-            "officeAddress":"Str. Marasesti",
-            "officePhone":"0756891756"
-        }
-    ],
-    "services":[
-        {
-            "id":"1",
-            "officesId":"1",
-            "serviceName":"curatatorie",
-            "servicePrice":"22$",
-            "serviceTime":"3h"
-        }
-    ]
+  "companies": [
+    {
+      "id": "1",
+      "name": "Maria",
+      "email": "ana-maria@yahoo.com",
+      "password": "Demo123",
+      "address": "SV",
+      "phone": "0756891756",
+      "details": "Something vnioghk"
+    },
+    {
+      "id": "2",
+      "name": "Vasile",
+      "email": "mihai22@yahoo.com",
+      "password": "Demo123",
+      "address": "SV",
+      "phone": "0756891756",
+      "details": "Something vnioghk"
+    },
+    {
+      "id": "3",
+      "name": "Petronela",
+      "email": "cosmina.petro@yahoo.com",
+      "password": "Demo123",
+      "address": "SV",
+      "phone": "0756891756",
+      "details": "Something vnioghk"
+    }
+  ],
+  "offices": [
+    {
+      "id": "1",
+      "companyId": "1",
+      "officeName": "Office1",
+      "officeEmail": "email@yahoo.com",
+      "officeAddress": "Str. Marasesti",
+      "officePhone": "0756891756"
+    },
+    {
+      "officeName": "da",
+      "officeEmail": "ana@yahoo.com",
+      "officeAddress": "gagag",
+      "officePhone": "0756891753",
+      "id": "bcDGrH2"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "officesId": "1",
+      "serviceName": "curatatorie",
+      "servicePrice": "22$",
+      "serviceTime": "3h"
+    },
+    {
+      "serviceName": "ana",
+      "servicePrice": "22$",
+      "serviceTime": "5h",
+      "id": "zaV__7D"
+    }
+  ]
 }
