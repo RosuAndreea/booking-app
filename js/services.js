@@ -8,15 +8,15 @@
 
 
    function addService (service) {
-    $services.append('<td><span>' + service.id + '</span><td>' 
-                        +'<td><span class="noedit serv-name"' + service.serviceName + '</span><input class="edit-input serv-name"/></td>' 
-                        +'<td><span class="noedit price"' + service.servicePrice + '</span><input class="edit-input price"/></td>'
-                        +'<td><span class="noedit time"' + service.serviceTime + '</span><input class="edit-input time"/></td>'
-                        +'<td><i class="fa fa-pencil edit noedit edit-serv" aria-hiddesn="true"></i>'
-                        +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="{{id}}"></i>'
-                        +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>'
-                        +'<i class="fa fa-times edit-input edit remove-edit" aria-hidden="true"></i>'
-        );
+    $services.append('<td><span>' + service.id + '</span></td>' 
+                    +'<td><span class="noedit serv-name">' + service.serviceName + '</span><input class="edit-input serv-name"/></td>' 
+                    +'<td><span class="noedit price">' + service.servicePrice + '</span><input class="edit-input price"/></td>'
+                    +'<td><span class="noedit time">' + service.serviceTime + '</span><input class="edit-input time"/></td>'
+                    +'<td><i class="fa fa-pencil edit noedit edit-serv" aria-hiddesn="true"></i>'
+                    +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="{{id}}"></i>'
+                    +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>'
+                    +'<i class="fa fa-times edit-input edit remove-edit" aria-hidden="true"></i>'
+    );
    }
 
 // take the data from db/services

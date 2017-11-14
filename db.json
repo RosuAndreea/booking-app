@@ -28,10 +28,20 @@
             "details":"Something vnioghk"
         }
     ],
-    "services":[
+    "offices":[
         {
             "id":"1",
             "companyId":"1",
+            "officeName":"Office1",
+            "officeEmail":"email@yahoo.com",
+            "officeAddress":"Str. Marasesti",
+            "officePhone":"0756891756"
+        }
+    ],
+    "services":[
+        {
+            "id":"1",
+            "officesId":"1",
             "serviceName":"curatatorie",
             "servicePrice":"22$",
             "serviceTime":"3h"

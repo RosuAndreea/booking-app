@@ -43,17 +43,8 @@
 			    </tr>
 			</thead>
 			<tbody>
-			    <tr>
-			        <td>John</td>
-			        <td>Doe</td>
-			        <td>John</td>
-			        <td>Doe</td>
-			        <td>john@example.com</td>
-			        <td><a href="services.html"><button class='more'>View more</button></a></td>
-			        <td>
-			        	<i class="fa fa-pencil edit" aria-hidden="true"></i>
-			        	<i class="fa fa-trash edit" aria-hidden="true"></i>
-			        </td>
+			    <tr class='offices-data' data-id='{{id}}'>
+			       
 			    </tr>
 			</tbody>
   		</table>
@@ -67,16 +58,16 @@
 	    	<div class="container">
 	    		<h1 style='text-align: center;'>Add office</h1>
 	    		<label><b>Office name</b></label>
-			    <input type="text" placeholder="Enter Office's name" name="off-name" required>
+			    <input type="text" placeholder="Enter Office's name" name="off-name" id='add-off-name' required>
 
 			    <label><b>Email</b></label>
-			    <input type="text" placeholder="Enter Email" name="off-email" required>
+			    <input type="text" placeholder="Enter Email" name="off-email" id='add-off-email' required>
 
 			    <label><b>Address</b></label>
-			    <input type="text" name="off-address" required>
+			    <input type="text" name="off-address" id='add-off-address' required>
 
 			    <label><b>Phone</b></label>
-			    <input type="text" name="off-phone" required>
+			    <input type="text" name="off-phone" id='add-off-phone' required>
 
 			    <div class="clearfix">
 			        <button type="button" onclick="document.getElementById('add-modal').style.display='none'" class="exit-modal">Cancel</button>
@@ -89,5 +80,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js'></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/offices.js"></script>
 </body>
 </html>

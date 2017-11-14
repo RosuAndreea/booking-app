@@ -8,15 +8,15 @@
         if($psw.val() !== $pswRepeat.val()){
             alert("This two passwords doesn't match!");
         }
-        var users = {
+        var companies = {
             email: $email.val(),
             psw: $psw.val()
         };
 
         $.ajax({
             type: "POST",
-            url: '/db/users',
-            data: users,
+            url: ApiUrl + 'companies',
+            data: companies,
             success: function (){
                 alert('V-ati inregistrat cu succes');
                 window.location = 'http:\\www.google.com';

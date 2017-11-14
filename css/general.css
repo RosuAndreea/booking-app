@@ -166,6 +166,18 @@ tbody .services-data.edit-input .noedit{
 	display: none;
 }
 
+tbody .offices-data .edit-input {
+	display: none;
+}
+
+tbody .offices-data.edit-input .edit-input{
+	display: initial;
+}
+
+tbody .offices-data.edit-input .noedit{
+	display: none;
+}
+
 
 /*-------------------------------Companies page----------------------------*/
 .accordion{
