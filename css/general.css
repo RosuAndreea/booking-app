@@ -206,6 +206,10 @@ content:counter(section);
     min-height: 300px;
     border: 1px solid gray;
 }
+.col-md-3 {
+	padding-bottom: 35px;
+}
+
 /*----------------------------Booking register page--------------------*/
 .form {
 	width: 60%;
