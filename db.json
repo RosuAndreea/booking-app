@@ -8,7 +8,7 @@
       "address": "SV",
       "phone": "0756891756",
       "details": "Something vnioghk",
-      "logo":""
+      "logo": ""
     },
     {
       "id": "2",
@@ -80,13 +80,21 @@
       "serviceName": "ana",
       "servicePrice": "22$",
       "serviceTime": "5h",
+      "officesId": "1",
       "id": "zaV__7D"
     },
     {
       "serviceName": "name",
       "servicePrice": "50E",
       "serviceTime": "40min",
+      "officesId": "1",
       "id": "vuCTrsa"
+    },
+    {
+      "serviceName": "flvbrvg",
+      "servicePrice": "222E",
+      "serviceTime": "50min",
+      "id": "MKsTAIB"
     }
   ]
 }

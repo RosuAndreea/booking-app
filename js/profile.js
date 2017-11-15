@@ -3,19 +3,18 @@
     $detailSide = $('.details-side');
 
     function profileDetails(data) {
-        $detailSide.append('<h1 class="company-details">Company Profile</h1>'
-                            +'<p class="company-detail">Company Name: </p>'
-                            +'<p>' + data.name + '</p>'
+        $detailSide.append('<p class="company-detail">Company Name: </p>'
+                            +'<span class="noedit comp-name">' + data.name + '</span><input class="edit-input comp-name"/>'
                             +'<p class="company-detail">Email: </p>'
-                            +'<p>' + data.email + '</p>'
+                            +'<span class="noedit comp-email">' + data.email + '</span><input class="edit-input comp-email"/>'
                             +'<p class="company-detail">Password: </p>'
-                            +'<p>' + data.password + '</p>'
+                            +'<span class="noedit comp-password">' + data.password + '</span><input class="edit-input comp-password"/>'
                             +"<p class='company-detail'>Address: </p>"
-                            +"<p>" + data.address + '</p>'
+                            +'<span class="noedit comp-address">' + data.address + '</span><input class="edit-input comp-address"/>'
                             +"<p class='company-detail'>Phone: </p>"
-                            +'<p>' + data.phone + '</p>'
+                            +'<span class="noedit comp-phone">' + data.phone + '</span><input class="edit-input comp-phonel"/>'
                             +"<p class='company-detail'>Details: </p>"
-                            +'<p>' + data.details + '</p>'
+                            +'<span class="noedit comp-details">' + data.details + '</span><input class="edit-input comp-details"/>'
                             +'<button class="edit-profile hvr-radial-in">Edit profile</button>'
         );
     }
@@ -50,6 +49,15 @@
 
     $('#file').change(function() {
         filePreview(this);
+    });
+
+    // Edit Profile
+    $('.edit-profile').on('click', function () {
+        var $div = $(this).closest('.details-side');
+        $div.find('input.comp-name').val( $div.find('span.comp-name').html() );
+        $div.find('input.comp-email').val( $div.find('span.comp-email').html() );
+        $div.find('input.comp-password').val( $div.find('span.comp-password').html() );
+        $div.addClass('edit-input');
     });
         
 })();

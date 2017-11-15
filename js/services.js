@@ -8,18 +8,18 @@
 
 
    function addService (service) {
-    $serviceData.append('<tr class="services-data">'
-                    +'<td class = "count"></td>' 
-                    +'<td><span class="noedit serv-name">' + service.serviceName + '</span><input class="edit-input serv-name"/></td>' 
-                    +'<td><span class="noedit price">' + service.servicePrice + '</span><input class="edit-input price"/></td>'
-                    +'<td><span class="noedit time">' + service.serviceTime + '</span><input class="edit-input time"/></td>'
-                    +'<td><i class="fa fa-pencil edit noedit edit-serv" aria-hiddesn="true"></i>'
-                    +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="{{id}}"></i>'
-                    +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>'
-                    +'<i class="fa fa-times edit-input edit remove-edit" aria-hidden="true"></i></td>'
-                    +'</tr>'
-    );
-   }
+        $serviceData.append('<tr class="services-data" data-id="{{id}}">'
+                        +'<td class = "count"></td>'  
+                        +'<td><span class="noedit serv-name">' + service.serviceName + '</span><input class="edit-input serv-name"/></td>' 
+                        +'<td><span class="noedit price">' + service.servicePrice + '</span><input class="edit-input price"/></td>'
+                        +'<td><span class="noedit time">' + service.serviceTime + '</span><input class="edit-input time"/></td>'
+                        +'<td><i class="fa fa-pencil edit noedit edit-serv" aria-hiddesn="true"></i>'
+                        +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="{{id}}"></i>'
+                        +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>'
+                        +'<i class="fa fa-times edit-input edit remove-edit" data-id="{{id}}" aria-hidden="true"></i></td>'
+                        +'</tr>'
+        );
+    }
 
 // take the data from db/services
     $.ajax({
@@ -66,16 +66,15 @@
 
 //    delete services
    $services.delegate('.remove-serv','click', function(){
-        var $td = $(this).closest('.service-data');
+        var $tr = $(this).closest('.service-data');
         var self = this;
         console.log('fer');
 
         $.ajax({
-            type: 'DELETE',
+            type: "DELETE",
             url: ApiUrl + 'services' + $(this).attr('data-id'),
             success: function (){
-                $(self);
-                $td.fadeOut(300, function(){
+                $tr.fadeOut(300, function(){
                     $(this).remove();
                 });
             }
@@ -111,10 +110,10 @@
             type: "PUT",
             url: ApiUrl + 'services' + $tr.attr('data-id'),
             data: services,
-            success: function (newService) {
-                $tr.find('span.serv-name').html(service.serviceName);
-                $tr.find('span.price').html(service.servicePrice);
-                $tr.find('span.time').html(service.serviceTime);
+            success: function () {
+                $tr.find('span.serv-name').html(services.serviceName);
+                $tr.find('span.price').html(services.servicePrice);
+                $tr.find('span.time').html(services.serviceTime);
                 $tr.removeClass('edit-input');
                 alert('You create a new service with success!');
             },

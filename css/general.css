@@ -75,7 +75,6 @@ footer {
 	width: 250px;
 	height: 250px;
 	margin-left: 100px;
-	margin-top: 100px;
 	display: flex;
 }
 .upload-img{
@@ -106,6 +105,18 @@ footer {
 }
 #file {
 	margin-left: 100px;
+}
+
+.details-side .edit-input {
+	display: none;
+}
+
+.details-side.edit-input .edit-input{
+	display: initial;
+}
+
+.details-side.edit-input .noedit{
+	display: none;
 }
 
 /*-----------------------BOOKING PAGE---------------------------*/
