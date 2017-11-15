@@ -35,4 +35,21 @@
         }
 
     });
+
+    // Upload profile images
+    function filePreview(input){
+        if(input.files && input.files[0]){
+            var reader = new FileReader();
+            reader.onload = function(e) {
+               $('.upload-side + .img').remove();
+               $('.upload-side').html('<img src="' + e.target.result +'" class="company-logo upload-images"/>' ); 
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    };
+
+    $('#file').change(function() {
+        filePreview(this);
+    });
+        
 })();

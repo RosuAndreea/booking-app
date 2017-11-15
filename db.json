@@ -7,7 +7,8 @@
       "password": "Demo123",
       "address": "SV",
       "phone": "0756891756",
-      "details": "Something vnioghk"
+      "details": "Something vnioghk",
+      "logo":""
     },
     {
       "id": "2",
@@ -16,7 +17,8 @@
       "password": "Demo123",
       "address": "SV",
       "phone": "0756891756",
-      "details": "Something vnioghk"
+      "details": "Something vnioghk",
+      "logo": ""
     },
     {
       "id": "3",
