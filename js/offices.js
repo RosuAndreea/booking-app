@@ -10,7 +10,7 @@
  
     function addOffice (office) {
         $officeData.append('<tr class="offices-data" data-id="{{id}}">'
-                        +'<td><span>' + office.id + '</span></td>' 
+                        +'<td class = "count"></td>' 
                         +'<td><span class="noedit off-name">' + office.officeName + '</span><input class="edit-input off-name"/></td>' 
                         +'<td><span class="noedit email">' + office.officeEmail + '</span><input class="edit-input email"/></td>'
                         +'<td><span class="noedit address">' + office.officeAddress + '</span><input class="edit-input address"/></td>'

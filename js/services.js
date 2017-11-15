@@ -9,7 +9,7 @@
 
    function addService (service) {
     $serviceData.append('<tr class="services-data">'
-                    +'<td><span>' + service.id + '</span></td>' 
+                    +'<td class = "count"></td>' 
                     +'<td><span class="noedit serv-name">' + service.serviceName + '</span><input class="edit-input serv-name"/></td>' 
                     +'<td><span class="noedit price">' + service.servicePrice + '</span><input class="edit-input price"/></td>'
                     +'<td><span class="noedit time">' + service.serviceTime + '</span><input class="edit-input time"/></td>'

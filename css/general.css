@@ -177,7 +177,13 @@ tbody .offices-data.edit-input .edit-input{
 tbody .offices-data.edit-input .noedit{
 	display: none;
 }
-
+/* table count */
+table{counter-reset:section;}
+.count:before
+{
+counter-increment:section;
+content:counter(section);
+}
 
 /*-------------------------------Companies page----------------------------*/
 .accordion{

@@ -1,16 +1,16 @@
 (function(){
-
-    var $email = $('#email');
-    var $psw = $('#psw');
+    var $name = $('#signup-name');
+    var $email = $('#signup-email');
+    var $password = $('#signup-psw');
     var $pwsRepeat = $('#psw-repeat');
+    var $description = $('#signup-description');
 
     $('.signupbtn').on('click', function (){
-        if($psw.val() !== $pswRepeat.val()){
-            alert("This two passwords doesn't match!");
-        }
         var companies = {
+            name: $name.val(),
             email: $email.val(),
-            psw: $psw.val()
+            password: $password.val(),
+            description: $description.val()
         };
 
         $.ajax({
@@ -18,9 +18,9 @@
             url: ApiUrl + 'companies',
             data: companies,
             success: function (){
-                alert('V-ati inregistrat cu succes');
-                window.location = 'http:\\www.google.com';
-                // $(location).attr('href','http:\\www.google.com'); with jQuery
+                alert('V-ati inregistrat cu succes!');
+                alert('Va rugam sa va logati!');
+                window.location = 'file:///home/assist/workspace/booking-app/pages/index.html';
             },
             error: function (){
                alert('Eroare'); 

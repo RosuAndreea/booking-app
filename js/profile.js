@@ -23,9 +23,6 @@
     $.ajax({
         type: "GET",
         url: ApiUrl + 'companies',
-        // headers: {
-        //     "Access-Control-Allow-Origin": "*"
-        // },
         success: function (companies){
             console.log('companies ', companies)
             $.each(companies, function (i, companies){
