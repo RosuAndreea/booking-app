@@ -8,7 +8,7 @@
             +'<a><div class="mask"></div></a></div>'
             +'<div class="card-body">'
             +'<h4 class="card-title">' + item.name + '</h4>'
-            +'<p class="card-text">' + item.description + '...</p>'
+            +'<p class="card-text">' + item.details + '...</p>'
             +'<a href="#" class="black-text d-flex flex-row-reverse hvr-pulse">'
             +'<button class="waves-effect p-2">Book Now <i class="fa fa-chevron-right"></i></button>'
             +'</a></div></div></div>'

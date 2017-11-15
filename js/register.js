@@ -10,7 +10,7 @@
             name: $name.val(),
             email: $email.val(),
             password: $password.val(),
-            description: $description.val()
+            details: $description.val()
         };
 
         $.ajax({
