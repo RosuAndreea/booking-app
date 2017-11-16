@@ -12,16 +12,18 @@
                             +"<p class='company-detail'>Address: </p>"
                             +'<span class="noedit comp-address">' + data.address + '</span><input class="edit-input comp-address"/>'
                             +"<p class='company-detail'>Phone: </p>"
-                            +'<span class="noedit comp-phone">' + data.phone + '</span><input class="edit-input comp-phonel"/>'
+                            +'<span class="noedit comp-phone">' + data.phone + '</span><input class="edit-input comp-phone"/>'
                             +"<p class='company-detail'>Details: </p>"
                             +'<span class="noedit comp-details">' + data.details + '</span><input class="edit-input comp-details"/>'
-                            +'<button class="edit-profile hvr-radial-in">Edit profile</button>'
+                            +'<button class="edit-profile hvr-radial-in edit noedit">Edit profile</button>'
+                            +'<i class="fa fa-floppy-o edit-input edit save-edit" aria-hidden="true"></i>'
+                            +'<i class="fa fa-times edit-input edit remove-edit" data-id="{{id}}" aria-hidden="true"></i></td>'
         );
     }
 
     $.ajax({
         type: "GET",
-        url: ApiUrl + 'companies',
+        url: ApiUrl + 'companies?id=1',
         success: function (companies){
             console.log('companies ', companies)
             $.each(companies, function (i, companies){
@@ -52,12 +54,49 @@
     });
 
     // Edit Profile
-    $('.edit-profile').on('click', function () {
+    $detailSide.delegate('.edit-profile', 'click', function () {
         var $div = $(this).closest('.details-side');
         $div.find('input.comp-name').val( $div.find('span.comp-name').html() );
         $div.find('input.comp-email').val( $div.find('span.comp-email').html() );
         $div.find('input.comp-password').val( $div.find('span.comp-password').html() );
+        $div.find('input.comp-address').val( $div.find('span.comp-address').html() );
+        $div.find('input.comp-phone').val( $div.find('span.comp-phone').html() );
+        $div.find('input.comp-details').val( $div.find('span.comp-details').html() );
         $div.addClass('edit-input');
+    });
+
+    $detailSide.delegate('.remove-edit', 'click', function () {
+        $(this).closest('.details-side').removeClass('edit-input');
+    });
+
+    $detailSide.delegate('.save-edit', 'click', function() {
+        var $div = $(this).closest('.details-side');
+        var companies = {
+           name: $div.find('input.comp-name').val(),
+           email: $div.find('input.comp-email').val(),
+           password: $div.find('input.comp-password').val(),
+           address: $div.find('input.comp-address').val(),
+           phone: $div.find('input.comp-phone').val(),
+           details: $div.find('input.comp-details').val()
+        }; 
+
+        $.ajax({
+            type: "PUT",
+            url: ApiUrl + 'companies?id=1',
+            data: companies,
+            success: function(){
+                $div.find('span.comp-name').html(companies.name);
+                $div.find('span.comp-email').html(companies.email);
+                $div.find('span.comp-password').html(companies.password);
+                $div.find('span.comp-address').html(companies.address);
+                $div.find('span.comp-phone').html(companies.phone);
+                $div.find('span.comp-details').html(companies.details);
+            },
+            error: function (err){
+                console.log('Err ', err);
+                //alert('Error loading services');
+            }
+        });
     });
         
 })();
