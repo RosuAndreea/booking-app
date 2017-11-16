@@ -236,18 +236,19 @@ content:counter(section);
 	width: 50%;
 	float: right;
 }
-#selectCompany {
+#selectCompany, #selectOff {
 	width: 100px;
 	background: #e38690;
 	float: left;
 	margin-left: 100px;
 }
-#selectDate {
+#selectServ {
 	width: 100px;
 	background: #e38690;
 	float: right;
 	margin-right: 100px;
 }
+
 /*----------------------------Booking register page--------------------*/
 .form {
 	width: 60%;

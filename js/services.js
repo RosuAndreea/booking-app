@@ -20,6 +20,8 @@
         );
     }
 
+    
+
 // take the data from db/services
     $.ajax({
         type: "GET",
