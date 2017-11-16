@@ -5,6 +5,9 @@
     var $pwsRepeat = $('#psw-repeat');
     var $description = $('#signup-description');
 
+    
+    // Sign Up
+
     $('.signupbtn').on('click', function (){
         var companies = {
             name: $name.val(),
@@ -27,5 +30,38 @@
             }
         });
     });
+
+    // SignIn
+    $('.login').on('click', function(){
+        var $email = $('.uname').val();
+        var $password = $('.psw').val();
+        var error = true;
+
+        $.ajax({
+            type: "GET",
+            url: ApiUrl +'companies',
+            dataType: "json",
+            success: function(data){
+                
+                $.each(data, function(key, value){
+                    
+                    if($email == value.email && $password == value.password){
+                        console.log('dfs');
+                        error = false;
+                    }
+                });
+                if(error == false){
+                    document.location = 'profile.html'
+                } else {
+                    $('.uname').val('');
+                    $('.psw').val("");
+                    alert('Error');
+                }
+            }
+        });
+        return false;
+    
+    });
+    
 
 })();

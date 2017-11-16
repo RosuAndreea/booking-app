@@ -10,7 +10,7 @@
             +'<h4 class="card-title">' + item.name + '</h4>'
             +'<p class="card-text">' + item.details + '...</p>'
             +'<a href="#" class="black-text d-flex flex-row-reverse hvr-pulse">'
-            +'<button class="waves-effect p-2">Book Now <i class="fa fa-chevron-right"></i></button>'
+            +'<button class="waves-effect p-2" id="selectOff">Book Now <i class="fa fa-chevron-right"></i></button>'
             +'</a></div></div></div>'
         );
     }

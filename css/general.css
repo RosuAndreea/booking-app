@@ -221,6 +221,33 @@ content:counter(section);
 	padding-bottom: 35px;
 }
 
+[hidden] {
+	display: none;
+}
+
+.hidden{
+	display: none;
+}
+
+.list-group {
+	width: 40%;
+}
+.office-details {
+	width: 50%;
+	float: right;
+}
+#selectCompany {
+	width: 100px;
+	background: #e38690;
+	float: left;
+	margin-left: 100px;
+}
+#selectDate {
+	width: 100px;
+	background: #e38690;
+	float: right;
+	margin-right: 100px;
+}
 /*----------------------------Booking register page--------------------*/
 .form {
 	width: 60%;

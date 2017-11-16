@@ -6,7 +6,6 @@
    var $servTime = $('#add-serv-time');
    var ApiUrl = window.ApiUrl;
 
-
    function addService (service) {
         $serviceData.append('<tr class="services-data" data-id="{{id}}">'
                         +'<td class = "count"></td>'  
@@ -25,9 +24,9 @@
     $.ajax({
         type: "GET",
         url: ApiUrl + 'services',
-        // headers: {
-        //     "Access-Control-Allow-Origin": "*"
-        // },
+        headers: {
+            "Access-Control-Allow-Origin": "*"
+        },
         success: function (services){
             console.log('services ', services)
             $.each(services, function (i, service){
@@ -65,14 +64,15 @@
 
 
 //    delete services
-   $services.delegate('.remove-serv','click', function(){
+   $serviceData.delegate('.remove-serv','click', function(){
         var $tr = $(this).closest('.service-data');
         var self = this;
         console.log('fer');
 
         $.ajax({
-            type: "DELETE",
             url: ApiUrl + 'services' + $(this).attr('data-id'),
+            type: "DELETE",
+            contentType: "application/json",
             success: function (){
                 $tr.fadeOut(300, function(){
                     $(this).remove();
@@ -107,8 +107,9 @@
             serviceTime: $tr.find('input.time').val()
         };
         $.ajax({
-            type: "PUT",
             url: ApiUrl + 'services' + $tr.attr('data-id'),
+            type: 'PUT',
+            contentType: "json",
             data: services,
             success: function () {
                 $tr.find('span.serv-name').html(services.serviceName);

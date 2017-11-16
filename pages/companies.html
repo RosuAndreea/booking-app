@@ -29,7 +29,7 @@
 	</nav>
 
 	 <!-- Company Page -->
-	<div class='wrapper' id='select-comp'>
+	<div class='wrapper hidden' id='select-comp'>
 		<div class='content'>
 			<h1 class='company-details'>Companies</h1>
 			<div class='row'>
@@ -50,17 +50,20 @@
 			  	<li class="breadcrumb-item active">Office</li>
 			</ol>
 			<h1 class='company-details'>Select an Office</h1>
-			<div class="container-off" id="officeAccordion">
-				<div class="accordion" data-role="collapsible-set">
+			<div class="container-off">
+				<div class="list-group">
 					
 				</div>
-				<div id="map"></div>	
+				<div class='office-details'>
+				</div>	
 			</div>
+			<button id="selectCompany">Back</button>
+			<button id="selectDate">Next</button>
 		</div>
 	</div>
 
 	<!-- Services page -->
-	<!-- <div class='wrapper' id='select-serv'>
+	<!-- <div class='wrapper hidden' id='select-serv'>
 		<div class='content'>
 			<ol class="breadcrumb">
 				<li class='breadcrumb-item'>Office</li>
@@ -106,7 +109,7 @@
 
 	<!-- Registration page -->
 
-	<div class='wrapper' id='details-cont'>
+	<div class='wrapper hidden' id='details-cont'>
 		<div class='content'>
 			<ol class='breadcrumb'>
 				<li class='breadcrumb-item'>Office</li>
@@ -160,7 +163,7 @@
 				<input type='text' placeholder='Enter your username' name='uname' required></input>
 				<label><b>Password</b></label>
 				<input type='password' placeholder='Enter your password' name='psw' required></input>
-				<button type='submit'>Login</button>
+				<button type='submit' class='login'>Login</button>
 			</div>
 			<div class='container' style='background-color:#f1f1f1'>
 				<button type='button' onclick='document.getElementById("log-modal").style.display="none"' class='exit-modal'>Cancel</button>
@@ -224,9 +227,9 @@
 	<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
 	<script type="text/javascript" src="../js/jquery-ui-1.9.2.custom.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgdmiOP7pJuWv-plWospEgy-PTZrggZak"></script>
-	<script type="text/javascript" src="../js/ui.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
 	<script type="text/javascript" src="../js/register.js"></script>
 	<script type="text/javascript" src="../js/companies.js"></script>
+	<script type="text/javascript" src="../js/offices.js"></script>
 </body>
 </html>
