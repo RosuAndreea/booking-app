@@ -34,7 +34,7 @@
                                 +'<div class="card-text">'
                                 +'<p id="service-detail-text">' + service.serviceDescription + '</p>'
                                 +'<button id="booking-time">' + service.serviceTime + '</button>'
-                                +'<button id="selectDate">Select</button>'
+                                +'<button class="selectDate">Select</button>'
                                 +'</div></div></div></div>'
             );
         });
