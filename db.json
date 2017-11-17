@@ -74,27 +74,31 @@
       "officesId": "1",
       "serviceName": "curatatorie",
       "servicePrice": "22$",
-      "serviceTime": "3h"
+      "serviceTime": "3h",
+      "serviceDescription": "fhruigdr"
     },
     {
       "serviceName": "ana",
       "servicePrice": "22$",
       "serviceTime": "5h",
       "officesId": "1",
-      "id": "zaV__7D"
+      "id": "zaV__7D",
+      "serviceDescription": "fhruigdr"
     },
     {
       "serviceName": "name",
       "servicePrice": "50E",
       "serviceTime": "40min",
       "officesId": "1",
-      "id": "vuCTrsa"
+      "id": "vuCTrsa",
+      "serviceDescription": "fhruigdr"
     },
     {
       "serviceName": "flvbrvg",
       "servicePrice": "222E",
       "serviceTime": "50min",
-      "id": "MKsTAIB"
+      "id": "MKsTAIB",
+      "serviceDescription": "fhruigdr"
     }
   ]
 }

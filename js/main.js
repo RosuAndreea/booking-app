@@ -16,4 +16,14 @@
         $('#select-off').hide();
         $('#select-comp').removeClass('hidden');
     });
+
+    $('#backSelectOff').on('click', function() {
+        $('#select-serv').hide();
+        $('#select-off').show();
+    });
+
+    $('#selectDate').on('click', function() {
+        $('#select-serv').hide();
+        $('#select-date').removeClass('hidden');
+    });
 })();
