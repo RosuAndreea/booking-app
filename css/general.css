@@ -242,13 +242,13 @@ content:counter(section);
 	width: 50%;
 	float: right;
 }
-#selectCompany, #selectOff , #backSelectOff{
+#selectCompany, #selectOff , #backSelectOff, #backToService{
 	width: 100px;
 	background: #e38690;
 	float: left;
 	margin-left: 100px;
 }
-#selectServ {
+#selectServ, #registerForm {
 	width: 100px;
 	background: #e38690;
 	float: right;
