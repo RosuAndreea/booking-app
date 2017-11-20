@@ -129,19 +129,25 @@
 					<input type='text' placeholder='Enter your phone' name='booking-phone' required></input>
 				</div>
 			</div>
-			<div class="buttons-next">
-				<span class="btn-left">
-					<button class="button">Back</button>
-				</span>
-				<span class="btn-right">
-					<button class="button">Continue</button>
-				</span>
-			</div>
+			<button id="backToCalendar">Back</button>
+			<button id="confirmationSection">Next</button>
 
 		</div>
 	</div>
 
 	<!-- Confirmation page -->
+	<div class='wrapper hidden' id='confirmation-section'>
+		<div class='content'>
+			<div class='booking-summary'>
+				<h4>Booking Summary</h2>
+			</div>
+			<div class='customer-details'>
+				<h4>My details</h2>
+			</div>
+			<button id="backToForm">Back</button>
+			<button id="confirm">Confirm</button>
+		</div>
+	</div>
 
 	<footer>
 		<p>Copyright by BookingApp</p>

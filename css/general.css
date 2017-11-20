@@ -242,13 +242,19 @@ content:counter(section);
 	width: 50%;
 	float: right;
 }
-#selectCompany, #selectOff , #backSelectOff, #backToService{
+#selectOff {
+	width: 100px;
+	background: #e38690;
+	margin-right: 10px;
+}
+
+#selectCompany, #backSelectOff, #backToService, #backToCalendar, #backToForm{
 	width: 100px;
 	background: #e38690;
 	float: left;
 	margin-left: 100px;
 }
-#selectServ, #registerForm {
+#selectServ, #registerForm, #confirmationSection, #confirm {
 	width: 100px;
 	background: #e38690;
 	float: right;

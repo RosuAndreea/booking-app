@@ -35,9 +35,25 @@
         $('#select-date').removeClass('hidden');
     });
 
+    $('#register-form').delegate('#backToCalendar','click',function() {
+        $('#register-form').addClass('hidden');
+        $('#select-date').removeClass('hidden');
+    });
+
     //Complete the register form
     $('#select-date').delegate('#registerForm','click',function() {
         $('#select-date').addClass('hidden');
         $('#register-form').removeClass('hidden');
     });
+    $('#confirmation-section').delegate('#backToForm','click',function(){
+        $('#confirmation-section').addClass('hidden');
+        $('#register-form').removeClass('hidden');
+    });
+
+    // View the booking details
+    $('#register-form').delegate('#confirmationSection','click',function() {
+        $('#register-form').addClass('hidden');
+        $('#confirmation-section').removeClass('hidden');
+    });
+
 })();
