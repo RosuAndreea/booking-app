@@ -10,35 +10,35 @@
 
    //Admin- services
    function addService (service) {
-        $serviceData.append('<tr class="services-data" data-id="{{id}}">'
-                        +'<td class = "count"></td>'  
-                        +'<td><span class="noedit serv-name">' + service.serviceName + '</span><input class="edit-input serv-name"/></td>' 
-                        +'<td><span class="noedit price">' + service.servicePrice + '</span><input class="edit-input price"/></td>'
-                        +'<td><span class="noedit time">' + service.serviceTime + '</span><input class="edit-input time"/></td>'
-                        +'<td><span class="noedit description">' + service.serviceDescription + '</span><input class="edit-input description"/></td>'
-                        +'<td><i class="fa fa-pencil edit noedit edit-serv" aria-hiddesn="true"></i>'
-                        +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="{{id}}"></i>'
-                        +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>'
-                        +'<i class="fa fa-times edit-input edit remove-edit" data-id="{{id}}" aria-hidden="true"></i></td>'
-                        +'</tr>'
+        $serviceData.append(
+            '<tr class="services-data" data-id="{{id}}">'
+            +'<td class = "count"></td>'  
+            +'<td><span class="noedit serv-name">' + service.serviceName + '</span><input class="edit-input serv-name"/></td>' 
+            +'<td><span class="noedit price">' + service.servicePrice + '</span><input class="edit-input price"/></td>'
+            +'<td><span class="noedit time">' + service.serviceTime + '</span><input class="edit-input time"/></td>'
+            +'<td><span class="noedit description">' + service.serviceDescription + '</span><input class="edit-input description"/></td>'
+            +'<td><i class="fa fa-pencil edit noedit edit-serv" aria-hiddesn="true"></i>'
+            +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="{{id}}"></i>'
+            +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>'
+            +'<i class="fa fa-times edit-input edit remove-edit" data-id="{{id}}" aria-hidden="true"></i></td>'
+            +'</tr>'
         );
     };
 
     function bookingServices (service) {
-        // $('#selectServ').on('click', function (){
-            $servWrapper.append('<div class="col-md-4">'
-                                +'<div class="card">'
-                                +'<div class="header-card">'
-                                +'<h4 class="card-title">' + service.serviceName + '</h4>'
-                                +'</div><div class="card-body"><span>'
-                                +'<p id="booking-price">' + service.servicePrice + '</p></span>'
-                                +'<div class="card-text">'
-                                +'<p id="service-detail-text">' + service.serviceDescription + '</p>'
-                                +'<button id="booking-time">' + service.serviceTime + '</button>'
-                                +'<button class="selectDate" onclick="selectService('+ service.id +')">Select</button>'
-                                +'</div></div></div></div>'
-            );
-        // });
+        $servWrapper.append(
+            '<div class="col-md-4">'
+            +'<div class="card">'
+            +'<div class="header-card">'
+            +'<h4 class="card-title">' + service.serviceName + '</h4>'
+            +'</div><div class="card-body"><span>'
+            +'<p id="booking-price">' + service.servicePrice + '</p></span>'
+            +'<div class="card-text">'
+            +'<p id="service-detail-text">' + service.serviceDescription + '</p>'
+            +'<button id="booking-time">' + service.serviceTime + '</button>'
+            +'<button class="selectDate" onclick="selectService('+ service.id +')">Select</button>'
+            +'</div></div></div></div>'
+        );
     };
     
     window.selectService = function(serviceId,serviceName) {
@@ -62,7 +62,6 @@
                 console.log('Err ', err);
                 //alert('Error loading services');
             }
-    
         });
     }
    

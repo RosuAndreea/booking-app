@@ -11,19 +11,20 @@
  
     // Profile-admin
     function addOffice (office) {
-        $officeData.append('<tr class="offices-data" data-id="{{id}}">'
-                        +'<td class = "count"></td>' 
-                        +'<td><span class="noedit off-name">' + office.officeName + '</span><input class="edit-input off-name"/></td>' 
-                        +'<td><span class="noedit email">' + office.officeEmail + '</span><input class="edit-input email"/></td>'
-                        +'<td><span class="noedit address">' + office.officeAddress + '</span><input class="edit-input address"/></td>'
-                        +'<td><span class="noedit phone">' + office.officePhone + '</span><input class="edit-input phone"/></td>'
-                        +'<td><span class="noedit view"><a href="services.html"><button class="more">View more</button></a></td>'
-                        +'<td><i class="fa fa-pencil edit noedit edit-off" aria-hiddesn="true"></i>'
-                        +'<i class="fa fa-trash edit remove-off" aria-hidden="true" data-id="{{id}}"></i>'
-                        +'<i class="fa fa-floppy-o edit-input edit save-off" aria-hidden="true"></i>'
-                        +'<i class="fa fa-times edit-input edit remove-edit" aria-hidden="true"></i></td>'
-                        +'</tr>'
-         );
+        $officeData.append(
+            '<tr class="offices-data" data-id="{{id}}">'
+            +'<td class = "count"></td>' 
+            +'<td><span class="noedit off-name">' + office.officeName + '</span><input class="edit-input off-name"/></td>' 
+            +'<td><span class="noedit email">' + office.officeEmail + '</span><input class="edit-input email"/></td>'
+            +'<td><span class="noedit address">' + office.officeAddress + '</span><input class="edit-input address"/></td>'
+            +'<td><span class="noedit phone">' + office.officePhone + '</span><input class="edit-input phone"/></td>'
+            +'<td><span class="noedit view"><a href="services.html"><button class="more">View more</button></a></td>'
+            +'<td><i class="fa fa-pencil edit noedit edit-off" aria-hiddesn="true"></i>'
+            +'<i class="fa fa-trash edit remove-off" aria-hidden="true" data-id="{{id}}"></i>'
+            +'<i class="fa fa-floppy-o edit-input edit save-off" aria-hidden="true"></i>'
+            +'<i class="fa fa-times edit-input edit remove-edit" aria-hidden="true"></i></td>'
+            +'</tr>'
+        );
     }
     // Take the offices for the booking select office
     function renderOffices (office){
@@ -33,18 +34,16 @@
     }
     // Take the details about the selected office for the booking select office
     function showOfficeDetails (email, address, phone) {
-        // $('.list-group-item').on('click', function() {
-            $detailsWrapper.empty();
-            $detailsWrapper.append(
-                '<p class = "company-detail">Email:</p>'
-                +'<p>' + email + '</p>'
-                +'<p class = "company-detail">Phone:</p>'
-                +'<p>' + phone + '</p>'
-                +'<p class = "company-detail">Address:</p>'
-                +'<p>' + address + '</p>'
-                +'<button id="selectServ">Next</button>'
-            );
-        // });
+        $detailsWrapper.empty();
+        $detailsWrapper.append(
+            '<p class = "company-detail">Email:</p>'
+            +'<p>' + email + '</p>'
+            +'<p class = "company-detail">Phone:</p>'
+            +'<p>' + phone + '</p>'
+            +'<p class = "company-detail">Address:</p>'
+            +'<p>' + address + '</p>'
+            +'<button id="selectServ">Next</button>'
+        );
     }
 
     window.selectOffice = function(officeId, officeEmail, officeAddress, officePhone) {

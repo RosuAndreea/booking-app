@@ -45,14 +45,16 @@
       "officeEmail": "",
       "officeAddress": "Marasesti",
       "officePhone": "0756891756",
-      "id": 2
+      "id": 2,
+      "companyId": 1
     },
     {
       "officeName": "Office3",
       "officeEmail": "email@yahoo.com",
       "officeAddress": "Enescu",
       "officePhone": "023168645",
-      "id": 3
+      "id": 3,
+      "companyId": 1
     },
     {
       "officeName": "Office-test",

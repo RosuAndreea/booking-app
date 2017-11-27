@@ -23,7 +23,7 @@
     };
 
     // Get companies
-   function getCompanies() {
+    function getCompanies() {
         $.ajax({
             type: "GET",
             url: ApiUrl + 'companies',

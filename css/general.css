@@ -236,11 +236,13 @@ content:counter(section);
 }
 
 .list-group {
-	width: 40%;
+	width: 30%;
+	margin-bottom: 0px;
 }
 .office-details {
 	width: 50%;
 	float: right;
+	margin-top: -70px;
 }
 #selectOff {
 	width: 100px;
