@@ -25,7 +25,7 @@
     };
 
     function bookingServices (service) {
-        $('#selectServ').on('click', function (){
+        // $('#selectServ').on('click', function (){
             $servWrapper.append('<div class="col-md-4">'
                                 +'<div class="card">'
                                 +'<div class="header-card">'
@@ -35,33 +35,37 @@
                                 +'<div class="card-text">'
                                 +'<p id="service-detail-text">' + service.serviceDescription + '</p>'
                                 +'<button id="booking-time">' + service.serviceTime + '</button>'
-                                +'<button class="selectDate">Select</button>'
+                                +'<button class="selectDate" onclick="selectService('+ service.id +')">Select</button>'
                                 +'</div></div></div></div>'
             );
-        });
+        // });
     };
-        
+    
+    window.selectService = function(serviceId,serviceName) {
+        window.myStore.serviceId = serviceId;
+        window.myStore.serviceName = serviceName;
+    };
     
 // take the data from db/services
-    $.ajax({
-        type: "GET",
-        url: ApiUrl + 'services',
-        headers: {
-            "Access-Control-Allow-Origin": "*"
-        },
-        success: function (services){
-            console.log('services ', services)
-            $.each(services, function (i, service){
-                addService(service);
-                bookingServices (service);
-            });
-        },
-        error: function (err){
-            console.log('Err ', err);
-            //alert('Error loading services');
-        }
-
-    });
+    window.getServices = function(officeId){
+        $.ajax({
+            type: "GET",
+            url: ApiUrl + 'services?officeId=' + officeId,
+            success: function (services){
+                console.log('services ', services)
+                $.each(services, function (i, service){
+                    addService(service);
+                    bookingServices (service);
+                });
+            },
+            error: function (err){
+                console.log('Err ', err);
+                //alert('Error loading services');
+            }
+    
+        });
+    }
+   
 
 // add service
     $('.add-btn').on('click',function (){

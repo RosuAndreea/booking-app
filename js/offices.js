@@ -51,6 +51,7 @@
         window.myStore.officeId = officeId;
         window.myStore.officeAddress = officeAddress;
         showOfficeDetails(officeEmail, officeAddress, officePhone);
+        window.getServices(officeId);
     };
  
  // take the data from db/offices
