@@ -2323,7 +2323,7 @@
     utils_hooks__hooks.defaultFormatUtc = 'YYYY-MM-DDTHH:mm:ss[Z]';
 
     function toString () {
-        return this.clone().locale('en').format('ddd MMM DD YYYY HH:mm:ss [GMT]ZZ');
+        return this.clone().locale('en').format('ddd DD MMM YYYY HH:mm:ss [GMT]ZZ');
     }
 
     function moment_format__toISOString () {
@@ -3423,10 +3423,10 @@
     var defaultLongDateFormat = {
         LTS  : 'h:mm:ss A',
         LT   : 'h:mm A',
-        L    : 'MM/DD/YYYY',
-        LL   : 'MMMM D, YYYY',
-        LLL  : 'MMMM D, YYYY h:mm A',
-        LLLL : 'dddd, MMMM D, YYYY h:mm A'
+        L    : 'DD/MM/YYYY',
+        LL   : 'D MMMM, YYYY',
+        LLL  : 'D MMMM, YYYY h:mm A',
+        LLLL : 'dddd, D MMMM, YYYY h:mm A'
     };
 
     function longDateFormat (key) {
@@ -3437,7 +3437,7 @@
             return format;
         }
 
-        this._longDateFormat[key] = formatUpper.replace(/MMMM|MM|DD|dddd/g, function (val) {
+        this._longDateFormat[key] = formatUpper.replace(/MMMM|DD|MM|dddd/g, function (val) {
             return val.slice(1);
         });
 
