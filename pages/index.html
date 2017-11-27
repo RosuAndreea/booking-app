@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>Companies</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
 	<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../css/general.css">
-	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="../css/hover.css">
+	<link rel="stylesheet" href="../css/login.css">	
+	<link rel="stylesheet" href="../datepicker/daterangepicker.css" />
+
+	
+	
 	</head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -17,8 +22,7 @@
 				<p class="navbar-brand">BookingApp</p>
 			</div>
 			<ul class="nav navbar-nav">
-				<li class='active'><a href="#">Home</a></li>
-				<li><a href="companies.html">Companies</a></li>
+				<li class='active'><a href="#">Booking</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#"><span class="glyphicon glyphicon-user" onclick="document.getElementById('signup-modal').style.display='block'">SignUp</span></a></li>
@@ -27,8 +31,125 @@
 		</div>
 	</nav>
 
-	<footer>
+	 <!-- Company Page -->
+	<div class='wrapper' id='select-comp'>
+		<div class='content'>
+			<h1 class='company-details'>Companies</h1>
+			<div class='row'>
+				
+					
+    					
+					
+				
+			</div>
+		</div>
+	</div>
 
+	<!-- Office page -->
+
+	<div class='wrapper hidden' id='select-off'>
+		<div class='content'>
+			<ol class="breadcrumb">
+			  	<li class="breadcrumb-item active">Office</li>
+			</ol>
+			<h1 class='company-details'>Select an Office</h1>
+			<div class="container-off">
+				<div class="list-group">
+					
+				</div>
+				<div class='office-details'>
+				</div>	
+			</div>
+			<button id="selectCompany">Back</button>
+			
+		</div>
+	</div>
+
+	<!-- Services page -->
+	<div class='wrapper hidden' id='select-serv'>
+		<div class='content'>
+			<ol class="breadcrumb">
+				<li class='breadcrumb-item'>Office</li>
+			  	<li class="breadcrumb-item active">Services</li>
+			</ol>
+			<h1 class='company-details'>Select an Service</h1>
+			<div style = 'width:100%;display:inline-block;'>
+				<button id="backSelectOff">Back</button>
+			</div>
+			
+			<div id='service-panel'>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- Calendar page -->
+	<div class='wrapper hidden' id='select-date'>
+		<div class='content'>
+			<ol class='breadcrumb'>
+				<li class='breadcrumb-item'>Office</li>
+				<li class='breadcrumb-item'>Service</li>
+				<li class='breadcrumb-item active'>Date and time</li>
+			</ol>
+			<div class='about-booking'>
+				<h1 class='company-details'>Select date and time</h1>
+				<input type="text" name="daterange" id='data-pick' value="01/01/2017 - 01/31/2017" />
+				<div id="my-datepicker"></div>
+			</div>
+			<button id="backToService">Back</button>
+			<button id="registerForm">Next</button>
+		</div>
+	</div>
+
+	<!-- Registration page -->
+
+	<div class='wrapper hidden' id='register-form'>
+		<div class='content'>
+			<ol class='breadcrumb'>
+				<li class='breadcrumb-item'>Office</li>
+				<li class='breadcrumb-item'>Service</li>
+				<li class='breadcrumb-item'>Date and time</li>
+				<li class='breadcrumb-item active'>Register</li>
+			</ol>
+			<div class='about-booking'>
+				<h1 class='company-details'>Booking details</h1>
+				<ul class='details-list-form'></ul>
+			</div>
+			<div class='form'>
+				<h1 class='company-details'>Register</h1>
+				<div class='booking-registration'>
+					<label><b>First Name</b></label>
+					<input type='text' placeholder='Enter your first name' name='booking-fname' id='customer-fName' required></input>
+					<label><b>Last Name</b></label>
+					<input type='text' placeholder='Enter your last name' name='booking-lname' id='customer-lName' required></input>
+					<label><b>Email</b></label>
+					<input type='text' placeholder='Enter your email' name='booking-email' id='customer-email' required></input>
+					<label><b>Phone</b></label>
+					<input type='text' placeholder='Enter your phone' name='booking-phone' id='customer-phone' required></input>
+				</div>
+			</div>
+			<button id="backToCalendar">Back</button>
+			<button id="confirmationSection">Next</button>
+
+		</div>
+	</div>
+
+	<!-- Confirmation page -->
+	<div class='wrapper hidden' id='confirmation-section'>
+		<div class='content'>
+			<div class='booking-summary'>
+				<h4>Booking Summary</h2>
+			</div>
+			<div class='customer-details'>
+				<h4>My details</h2>
+			</div>
+			<button id="backToForm">Back</button>
+			<button id="confirm">Confirm</button>
+		</div>
+	</div>
+
+	<footer>
+		<p>Copyright by BookingApp</p>
 	</footer>
 
 	 <!-- LOGIN MODAL --> 
@@ -41,9 +162,9 @@
 
 			<div class='container'>
 				<label><b>Username</b></label>
-				<input type='text' placeholder='Enter your username' name='uname' class='uname' required></input>
+				<input type='text' placeholder='Enter your username' name='uname' required></input>
 				<label><b>Password</b></label>
-				<input type='password' placeholder='Enter your password' name='psw' class='psw' required></input>
+				<input type='password' placeholder='Enter your password' name='psw' required></input>
 				<button type='submit' class='login'>Login</button>
 			</div>
 			<div class='container' style='background-color:#f1f1f1'>
@@ -59,14 +180,22 @@
 	  	<form class="modal-content animate">
 	  		<span onclick="document.getElementById('signup-modal').style.display='none'" class="close" title="Close Modal">×</span>
 	    	<div class="container">
+	    		<h1 style='text-align: center;'>Register</h1>
+	    		<label><b>Name</b></label>
+			    <input type="text" placeholder="Enter Company's name" name="name" id='signup-name' required>
+
 			    <label><b>Email</b></label>
-			    <input type="text" placeholder="Enter Email" name="email" required id='email'>
+			    <input type="text" placeholder="Enter Email" name="email" id='signup-email' required>
 
 			    <label><b>Password</b></label>
-			    <input type="password" placeholder="Enter Password" name="psw" required id='psw'>
+			    <input type="password" placeholder="Enter Password" name="psw" id='signup-psw' required>
 
 			    <label><b>Repeat Password</b></label>
-			    <input type="password" placeholder="Repeat Password" name="psw-repeat" required id='psw-repeat'>
+			    <input type="password" placeholder="Repeat Password" name="psw-repeat" id='psw-repeat' required>
+
+			    <label><b>Description</b></label>
+			    <textarea rows='8' cols='50' type="text" name="description" id='signup-description' required></textarea>
+
 			    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
 			    <div class="clearfix">
@@ -93,11 +222,23 @@
 		        modal.style.display = "none";
 		    }
 		}
-	</script>
+	</script>			
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js'></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="../datepicker/moment.min.js"></script>
+	<script type="text/javascript" src="../datepicker/daterangepicker.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/store.js"></script>
 	<script type="text/javascript" src="../js/register.js"></script>
+	<script type="text/javascript" src="../js/companies.js"></script>
+	<script type="text/javascript" src="../js/offices.js"></script>
+	<script type="text/javascript" src="../js/services.js"></script>
+	<script type="text/javascript" src="../js/date-picker.js"></script>
+	<script type="text/javascript" src='../js/newBooking.js'></script>
+	
+
 </body>
 </html>
