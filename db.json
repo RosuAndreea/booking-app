@@ -1,107 +1,67 @@
 {
   "companies": [
     {
-      "id": "1",
-      "name": "Maria",
-      "email": "ana-maria@yahoo.com",
-      "password": "Demo123",
-      "address": "SV",
-      "phone": "0756891756",
-      "details": "Something vnioghk",
-      "logo": ""
-    },
-    {
-      "id": "2",
-      "name": "Vasile",
-      "email": "mihai22@yahoo.com",
-      "password": "Demo123",
-      "address": "SV",
-      "phone": "0756891756",
-      "details": "Something vnioghk",
-      "logo": ""
-    },
-    {
-      "id": "3",
-      "name": "Petronela",
-      "email": "cosmina.petro@yahoo.com",
-      "password": "Demo123",
-      "address": "SV",
-      "phone": "0756891756",
-      "details": "Something vnioghk"
-    },
-    {
       "name": "andreea",
       "email": "andreea.alupoaei+admin@assist.ro",
-      "password": "daria",
-      "details": "ghdskgcfys",
-      "id": "be0YxTn"
+      "password": "Demo123",
+      "details": "test",
+      "id": 1
     },
     {
-      "name": "vdfvgf",
-      "email": "gdfgdfg",
-      "password": "fdgdgd",
-      "details": "gfddgd",
-      "id": "rqzPOug"
+      "name": "dalia",
+      "email": "dalia@yahoo.com",
+      "password": "Demo123",
+      "details": "test2",
+      "id": 2
     },
     {
-      "name": "trhh",
-      "email": "hjtyht",
-      "password": "fhyjygj",
-      "details": "yjyjy",
-      "id": "tREKxZk"
+      "name": "Company3",
+      "email": "email@yahoo.com",
+      "password": "Demo123",
+      "details": "test3",
+      "id": 3
     }
   ],
   "offices": [
     {
-      "id": "1",
-      "companyId": "1",
       "officeName": "Office1",
-      "officeEmail": "email@yahoo.com",
-      "officeAddress": "Str. Marasesti",
-      "officePhone": "0756891756"
+      "officeEmail": "",
+      "officeAddress": "Marasesti",
+      "officePhone": "0756891756",
+      "id": 1,
+      "companyId": 1
     },
     {
-      "officeName": "da",
-      "officeEmail": "ana@yahoo.com",
-      "officeAddress": "gagag",
-      "officePhone": "0756891753",
-      "id": "bcDGrH2"
+      "officeName": "Office2",
+      "officeEmail": "",
+      "officeAddress": "Marasesti",
+      "officePhone": "0756891756",
+      "id": 2
+    },
+    {
+      "officeName": "Office3",
+      "officeEmail": "email@yahoo.com",
+      "officeAddress": "Enescu",
+      "officePhone": "023168645",
+      "id": 3
     }
   ],
   "services": [
     {
-      "id": "1",
-      "officesId": "1",
-      "serviceName": "curatatorie",
-      "servicePrice": "22$",
-      "serviceTime": "3h",
-      "serviceDescription": "fhruigdr"
+      "serviceName": "Serv1",
+      "servicePrice": "22E",
+      "serviceTime": "12h",
+      "serviceDescription": "something",
+      "id": 1,
+      "officeId":1
     },
     {
-      "serviceName": "ana",
-      "servicePrice": "22$",
-      "serviceTime": "5h",
-      "officesId": "1",
-      "id": "zaV__7D",
-      "serviceDescription": "fhruigdr"
-    },
-    {
-      "serviceName": "name",
-      "servicePrice": "50E",
-      "serviceTime": "40min",
-      "officesId": "1",
-      "id": "vuCTrsa",
-      "serviceDescription": "fhruigdr"
-    },
-    {
-      "serviceName": "flvbrvg",
-      "servicePrice": "222E",
-      "serviceTime": "50min",
-      "id": "MKsTAIB",
-      "serviceDescription": "fhruigdr"
+      "serviceName": "Serv2",
+      "servicePrice": "55E",
+      "serviceTime": "1h",
+      "serviceDescription": "serv2 description",
+      "id": 2
     }
   ],
-  "booking": [
-  
-  ]
+  "booking": []
 }

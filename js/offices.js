@@ -9,7 +9,7 @@
     var $detailsWrapper = $('.office-details');
     var ApiUrl = window.ApiUrl;
  
- 
+    // Profile-admin
     function addOffice (office) {
         $officeData.append('<tr class="offices-data" data-id="{{id}}">'
                         +'<td class = "count"></td>' 
@@ -26,45 +26,49 @@
          );
     }
     // Take the offices for the booking select office
-    function selectOffice (office){
-        $selectAnOffice.append('<a href="#" class="list-group-item">' + office.officeName + '</a>'   
+    function renderOffices (office){
+        $selectAnOffice.append(
+            '<a class="list-group-item" onclick="selectOffice('+ office.id +')">' + office.officeName + '</a>'   
         );
     }
     // Take the details about the selected office for the booking select office
-    function postOfficeDetails (office) {
-        $('.list-group-item').on('click', function() {
+    function showOfficeDetails (officeEmail, officeAddress, officePhone) {
+        // $('.list-group-item').on('click', function() {
             $detailsWrapper.empty();
-            $detailsWrapper.append('<p class = "company-detail">Email:</p>'
-                                +'<p></p>'
-                                +'<p class = "company-detail">Phone:</p>'
-                                +'<p></p>'
-                                +'<p class = "company-detail">Address:</p>'
-                                +'<p></p>'
+            $detailsWrapper.append(
+                '<p class = "company-detail">Email:</p>'
+                +'<p>' + officeEmail + '</p>'
+                +'<p class = "company-detail">Phone:</p>'
+                +'<p>' + officePhone + '</p>'
+                +'<p class = "company-detail">Address:</p>'
+                +'<p>' + officeAddress + '</p>'
             );
-        });
+        // });
     }
+
+    window.selectOffice = function(officeId, officeName, officeAddress) {
+        window.myStore.officeId = officeId;
+        showOfficeDetails(officeName, officeAddress);
+    };
  
  // take the data from db/offices
-    $.ajax({
-        type: "GET",
-        url: ApiUrl + 'offices',
-         // headers: {
-         //     "Access-Control-Allow-Origin": "*"
-         // },
-        success: function (offices){
-            console.log('offices ', offices)
-            $.each(offices, function (i, office){
-                addOffice(office);
-                selectOffice(office);
-            });
-            postOfficeDetails();
-        },
-        error: function (err){
-            console.log('Err ', err);
-             //alert('Error loading offices');
-        }
- 
-    });
+    window.getOffices = function(companyId){
+        $.ajax({
+            type: "GET",
+            url: ApiUrl + 'offices?companyId=' + companyId,
+            success: function (offices){
+                console.log('offices ', offices)
+                $.each(offices, function (i, office){
+                   renderOffices(office);
+                });
+            },
+            error: function (err){
+                console.log('Err ', err);
+                 //alert('Error loading offices');
+            }
+        });
+    }
+   
  
  // add offices
     $('.add-btn').on('click',function (){
@@ -73,7 +77,6 @@
             officeEmail: $offEmail.val(),
             officeAddress: $offAddress.val(),
             officePhone: $offPhone.val(),
-
         };
 
         $.ajax({
@@ -95,7 +98,6 @@
     $officeData.delegate('.remove-off','click', function(){
         var $tr = $(this).closest('.office-data');
         var self = this;
-        console.log('fer');
  
         $.ajax({
             type: 'DELETE',
@@ -118,7 +120,6 @@
         $tr.find('input.off-address').val( $tr.find('span.off-address').html() );
         $tr.find('input.off-phone').val( $tr.find('span.off-phone').html() );
         $tr.addClass('edit-input');
-        console.log('hi');
          
     });   
       
@@ -138,7 +139,7 @@
         };
         $.ajax({
             type: "PUT",
-            url: ApiUrl + 'offices' + $tr.attr('data-id'),
+            url: ApiUrl + 'offices/' + $tr.attr('data-id'),
             data: offices,
             success: function (newOffice) {
                 $tr.find('span.off-name').html(office.officeName);
