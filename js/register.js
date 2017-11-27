@@ -13,7 +13,10 @@
             name: $name.val(),
             email: $email.val(),
             password: $password.val(),
-            details: $description.val()
+            details: $description.val(),
+            address:"",
+            phone:'',
+            logo:''
         };
 
         $.ajax({

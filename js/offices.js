@@ -60,6 +60,7 @@
                 console.log('offices ', offices)
                 $.each(offices, function (i, office){
                    renderOffices(office);
+                   addOffice(office);
                 });
             },
             error: function (err){

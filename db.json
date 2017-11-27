@@ -1,24 +1,33 @@
 {
   "companies": [
     {
-      "name": "andreea",
-      "email": "andreea.alupoaei+admin@assist.ro",
-      "password": "Demo123",
-      "details": "test",
+      "name": "Company1",
+      "email": "email@yahoo.com",
+      "password": "demo",
+      "details": "test1",
+      "address": "",
+      "phone": "",
+      "logo": "",
       "id": 1
     },
     {
-      "name": "dalia",
-      "email": "dalia@yahoo.com",
-      "password": "Demo123",
+      "name": "Company2",
+      "email": "email@yahoo.com",
+      "password": "demo",
       "details": "test2",
+      "address": "",
+      "phone": "",
+      "logo": "",
       "id": 2
     },
     {
       "name": "Company3",
       "email": "email@yahoo.com",
-      "password": "Demo123",
+      "password": "demo",
       "details": "test3",
+      "address": "",
+      "phone": "",
+      "logo": "",
       "id": 3
     }
   ],
@@ -53,7 +62,7 @@
       "serviceTime": "12h",
       "serviceDescription": "something",
       "id": 1,
-      "officeId":1
+      "officeId": 1
     },
     {
       "serviceName": "Serv2",
