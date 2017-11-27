@@ -215,7 +215,7 @@ content:counter(section);
 .container-off{
     width: 85%;
     margin: auto;
-    min-height: 300px;
+    min-height: 350px;
     border: 1px solid gray;
 }
 .col-md-4 {
@@ -254,11 +254,17 @@ content:counter(section);
 	float: left;
 	margin-left: 100px;
 }
-#selectServ, #registerForm, #confirmationSection, #confirm {
+#registerForm, #confirmationSection, #confirm {
 	width: 100px;
 	background: #e38690;
 	float: right;
 	margin-right: 100px;
+}
+#selectServ {
+	width: 100px;
+	background: #e38690;
+	float: right;
+	margin-right: 30px;
 }
 
 /* Booking services-card */

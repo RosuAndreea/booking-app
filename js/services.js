@@ -8,6 +8,7 @@
    var $servWrapper = $('#service-panel');
    var ApiUrl = window.ApiUrl;
 
+   //Admin- services
    function addService (service) {
         $serviceData.append('<tr class="services-data" data-id="{{id}}">'
                         +'<td class = "count"></td>'  

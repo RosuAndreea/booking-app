@@ -53,6 +53,27 @@
       "officeAddress": "Enescu",
       "officePhone": "023168645",
       "id": 3
+    },
+    {
+      "officeName": "Office-test",
+      "officeEmail": "email@yahoo.com",
+      "officeAddress": "Enescu",
+      "officePhone": "0756891753",
+      "id": 4
+    },
+    {
+      "officeName": "Office-test2",
+      "officeEmail": "",
+      "officeAddress": "",
+      "officePhone": "",
+      "id": 5
+    },
+    {
+      "officeName": "Office-test7",
+      "officeEmail": "kfgnhj",
+      "officeAddress": "yghjnyj",
+      "officePhone": "jyjf",
+      "id": 6
     }
   ],
   "services": [
@@ -71,6 +92,5 @@
       "serviceDescription": "serv2 description",
       "id": 2
     }
-  ],
-  "booking": []
+  ]
 }

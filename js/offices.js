@@ -32,23 +32,25 @@
         );
     }
     // Take the details about the selected office for the booking select office
-    function showOfficeDetails (officeEmail, officeAddress, officePhone) {
+    function showOfficeDetails (email, address, phone) {
         // $('.list-group-item').on('click', function() {
             $detailsWrapper.empty();
             $detailsWrapper.append(
                 '<p class = "company-detail">Email:</p>'
-                +'<p>' + officeEmail + '</p>'
+                +'<p>' + email + '</p>'
                 +'<p class = "company-detail">Phone:</p>'
-                +'<p>' + officePhone + '</p>'
+                +'<p>' + phone + '</p>'
                 +'<p class = "company-detail">Address:</p>'
-                +'<p>' + officeAddress + '</p>'
+                +'<p>' + address + '</p>'
+                +'<button id="selectServ">Next</button>'
             );
         // });
     }
 
-    window.selectOffice = function(officeId, officeName, officeAddress) {
+    window.selectOffice = function(officeId, officeEmail, officeAddress, officePhone) {
         window.myStore.officeId = officeId;
-        showOfficeDetails(officeName, officeAddress);
+        window.myStore.officeAddress = officeAddress;
+        showOfficeDetails(officeEmail, officeAddress, officePhone);
     };
  
  // take the data from db/offices
@@ -77,7 +79,7 @@
             officeName: $offName.val(),
             officeEmail: $offEmail.val(),
             officeAddress: $offAddress.val(),
-            officePhone: $offPhone.val(),
+            officePhone: $offPhone.val()
         };
 
         $.ajax({
