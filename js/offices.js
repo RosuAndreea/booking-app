@@ -44,11 +44,11 @@
             +'<p>' + address + '</p>'
             +'<button id="selectServ">Next</button>'
         );
+        window.myStore.officeAddress = address;
     }
 
     window.selectOffice = function(officeId, officeEmail, officeAddress, officePhone) {
         window.myStore.officeId = officeId;
-        window.myStore.officeAddress = officeAddress;
         showOfficeDetails(officeEmail, officeAddress, officePhone);
         window.getServices(officeId);
     };

@@ -307,6 +307,25 @@ content:counter(section);
 #data-pick {
 	width: 300px;
 }
+
+/*----------------------------Booking calendar page-----------------*/
+.table-condensed {
+	height: 330px;
+}
+
+.applyBtn {
+	font-size: 1em !important;
+}
+.cancelBtn {
+	font-size: 1em !important;
+}
+.daterangepicker th.month {
+	font-size: 20px;
+}
+.daterangepicker .calendar th, .daterangepicker .calendar td {
+	font-size: 18px;
+}
+
 /*----------------------------Booking register page--------------------*/
 .form {
 	width: 60%;
