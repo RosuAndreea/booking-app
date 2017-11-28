@@ -24,11 +24,14 @@
             +'<button class="selectDate" onclick="selectService('+ service.id +')">Select</button>'
             +'</div></div></div></div>'
         );
+        window.myStore.serviceName = service.serviceName;
+        window.myStore.servicePrice = service.servicePrice;
+        window.myStore.serviceTime = service.serviceTime;
+        window.myStore.serviceDescription = service.serviceDescription;
     };
     
-    window.selectService = function(serviceId,serviceName) {
-        window.myStore.serviceId = serviceId;
-        window.myStore.serviceName = serviceName;
+    window.selectService = function(serviceId) {
+        window.myStore.serviceId = serviceId;  
     };
     
 // take the data from db/services

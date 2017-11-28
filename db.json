@@ -95,5 +95,26 @@
       "id": 2,
       "officeId": 1
     }
+  ],
+  "booking": [
+    {
+      "companyName": "Company3",
+      "companyId": "1",
+      "officeAddress": "Enescu",
+      "officeEmail": "email@yahoo.com",
+      "officePhone": "023168645",
+      "officeId": "1",
+      "serviceName": "Serv2",
+      "servicePrice": "55E",
+      "serviceTime": "1h",
+      "serviceDescription": "serv2 description",
+      "serviceId": "2",
+      "data": "01/01/2017 - 01/31/2017",
+      "customerFname": "first",
+      "customerLname": "last",
+      "customerEmail": "customer1@yahoo.com",
+      "customerPhone": "0213656869",
+      "id": 1
+    }
   ]
 }
