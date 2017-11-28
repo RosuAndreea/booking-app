@@ -34,7 +34,7 @@
   "offices": [
     {
       "officeName": "Office1",
-      "officeEmail": "",
+      "officeEmail": "andreea@yahoo.com",
       "officeAddress": "Marasesti",
       "officePhone": "0756891756",
       "id": 1,
@@ -42,7 +42,7 @@
     },
     {
       "officeName": "Office2",
-      "officeEmail": "",
+      "officeEmail": "santa@gmail.com",
       "officeAddress": "Marasesti",
       "officePhone": "0756891756",
       "id": 2,
@@ -83,7 +83,7 @@
       "serviceName": "Serv1",
       "servicePrice": "22E",
       "serviceTime": "12h",
-      "serviceDescription": "something",
+      "serviceDescription": "descriere1",
       "id": 1,
       "officeId": 1
     },

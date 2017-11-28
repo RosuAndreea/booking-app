@@ -9,23 +9,6 @@
     var $detailsWrapper = $('.office-details');
     var ApiUrl = window.ApiUrl;
  
-    // Profile-admin
-    function addOffice (office) {
-        $officeData.append(
-            '<tr class="offices-data" data-id="{{id}}">'
-            +'<td class = "count"></td>' 
-            +'<td><span class="noedit off-name">' + office.officeName + '</span><input class="edit-input off-name"/></td>' 
-            +'<td><span class="noedit email">' + office.officeEmail + '</span><input class="edit-input email"/></td>'
-            +'<td><span class="noedit address">' + office.officeAddress + '</span><input class="edit-input address"/></td>'
-            +'<td><span class="noedit phone">' + office.officePhone + '</span><input class="edit-input phone"/></td>'
-            +'<td><span class="noedit view"><a href="services.html"><button class="more">View more</button></a></td>'
-            +'<td><i class="fa fa-pencil edit noedit edit-off" aria-hiddesn="true"></i>'
-            +'<i class="fa fa-trash edit remove-off" aria-hidden="true" data-id="{{id}}"></i>'
-            +'<i class="fa fa-floppy-o edit-input edit save-off" aria-hidden="true"></i>'
-            +'<i class="fa fa-times edit-input edit remove-edit" aria-hidden="true"></i></td>'
-            +'</tr>'
-        );
-    }
     // Take the offices for the booking select office
     function renderOffices (office){
         $selectAnOffice.append(
@@ -44,7 +27,6 @@
             +'<p>' + address + '</p>'
             +'<button id="selectServ">Next</button>'
         );
-        window.myStore.officeAddress = address;
     }
 
     window.selectOffice = function(officeId, officeEmail, officeAddress, officePhone) {
@@ -71,8 +53,28 @@
             }
         });
     }
-   
  
+
+
+    // ------------------- Profile-admin----------------------
+    
+    function addOffice (office) {
+        $officeData.append(
+            '<tr class="offices-data" data-id="{{id}}">'
+            +'<td class = "count"></td>' 
+            +'<td><span class="noedit off-name">' + office.officeName + '</span><input class="edit-input off-name"/></td>' 
+            +'<td><span class="noedit email">' + office.officeEmail + '</span><input class="edit-input email"/></td>'
+            +'<td><span class="noedit address">' + office.officeAddress + '</span><input class="edit-input address"/></td>'
+            +'<td><span class="noedit phone">' + office.officePhone + '</span><input class="edit-input phone"/></td>'
+            +'<td><span class="noedit view"><a href="services.html"><button class="more">View more</button></a></td>'
+            +'<td><i class="fa fa-pencil edit noedit edit-off" aria-hiddesn="true"></i>'
+            +'<i class="fa fa-trash edit remove-off" aria-hidden="true" data-id="{{id}}"></i>'
+            +'<i class="fa fa-floppy-o edit-input edit save-off" aria-hidden="true"></i>'
+            +'<i class="fa fa-times edit-input edit remove-edit" aria-hidden="true"></i></td>'
+            +'</tr>'
+        );
+    }
+
  // add offices
     $('.add-btn').on('click',function (){
         var offices = {

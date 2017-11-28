@@ -8,22 +8,7 @@
    var $servWrapper = $('#service-panel');
    var ApiUrl = window.ApiUrl;
 
-   //Admin- services
-   function addService (service) {
-        $serviceData.append(
-            '<tr class="services-data" data-id="{{id}}">'
-            +'<td class = "count"></td>'  
-            +'<td><span class="noedit serv-name">' + service.serviceName + '</span><input class="edit-input serv-name"/></td>' 
-            +'<td><span class="noedit price">' + service.servicePrice + '</span><input class="edit-input price"/></td>'
-            +'<td><span class="noedit time">' + service.serviceTime + '</span><input class="edit-input time"/></td>'
-            +'<td><span class="noedit description">' + service.serviceDescription + '</span><input class="edit-input description"/></td>'
-            +'<td><i class="fa fa-pencil edit noedit edit-serv" aria-hiddesn="true"></i>'
-            +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="{{id}}"></i>'
-            +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>'
-            +'<i class="fa fa-times edit-input edit remove-edit" data-id="{{id}}" aria-hidden="true"></i></td>'
-            +'</tr>'
-        );
-    };
+// -----------------------Booking page -------------------------
 
     function bookingServices (service) {
         $servWrapper.append(
@@ -65,6 +50,24 @@
         });
     }
    
+
+    // ------------------Admin- services------------------
+
+    function addService (service) {
+        $serviceData.append(
+            '<tr class="services-data" data-id="{{id}}">'
+            +'<td class = "count"></td>'  
+            +'<td><span class="noedit serv-name">' + service.serviceName + '</span><input class="edit-input serv-name"/></td>' 
+            +'<td><span class="noedit price">' + service.servicePrice + '</span><input class="edit-input price"/></td>'
+            +'<td><span class="noedit time">' + service.serviceTime + '</span><input class="edit-input time"/></td>'
+            +'<td><span class="noedit description">' + service.serviceDescription + '</span><input class="edit-input description"/></td>'
+            +'<td><i class="fa fa-pencil edit noedit edit-serv" aria-hiddesn="true"></i>'
+            +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="{{id}}"></i>'
+            +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>'
+            +'<i class="fa fa-times edit-input edit remove-edit" data-id="{{id}}" aria-hidden="true"></i></td>'
+            +'</tr>'
+        );
+    };
 
 // add service
     $('.add-btn').on('click',function (){
