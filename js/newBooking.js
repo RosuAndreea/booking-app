@@ -13,23 +13,15 @@
         });
     };
 
-    function takeCustomerInfo (info) {
         $('#confirmationSection').on('click',function(){
-            var customerInfo = {
-               customerFname: $customerFname.val(),
-               customerLname: $customerLname.val(),
-               customerEmail: $customerEmail.val(),
-               customerPhone: $customerPhone.val()
-            };
-            console.log(info);
+               window.myStore.customerFname = $customerFname.val();
+               window.myStore.customerLname = $customerLname.val();
+               window.myStore.customerEmail = $customerEmail.val();
+               window.myStore.customerPhone = $customerPhone.val();
+
         });
-    };
 
     $('#confirm').on('click',function(){
-        var booking = {
-            data: takeData(),
-            customerInfo: takeCustomerInfo()
-        };
         
         $.ajax({
             type: 'POST',
