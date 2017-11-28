@@ -13,6 +13,7 @@
             +'<button class="waves-effect p-2" id="selectOff" onclick="selectCompany('+ item.id +')">Book Now <i class="fa fa-chevron-right"></i></button>'
             +'</a></div></div></div>'
         );
+        window.myStore.companyName = item.name;
     }
 
     //Select company
