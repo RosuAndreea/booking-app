@@ -2,7 +2,8 @@
     var $card = $('.row');
 
     function addTemplate(item) {
-        $card.append('<div class="col-md-3"><div class="card">'
+        $card.append(
+            '<div class="col-md-3"><div class="card">'
             +'<div class="view overlay hm-white-slight">'
             +'<img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%28131%29.jpg" class="img-fluid" alt="">'
             +'<a><div class="mask"></div></a></div>'
@@ -10,15 +11,15 @@
             +'<h4 class="card-title">' + item.name + '</h4>'
             +'<p class="card-text">' + item.details + '</p>'
             +'<a class="black-text d-flex flex-row-reverse hvr-pulse">'
-            +'<button class="waves-effect p-2" id="selectOff" onclick="selectCompany('+ item.id +')">Book Now <i class="fa fa-chevron-right"></i></button>'
+            +'<button class="waves-effect p-2" id="selectOff" onclick="selectCompany(\'' + item.id +  '\',\'' + item.name + '\')">Book Now <i class="fa fa-chevron-right"></i></button>'
             +'</a></div></div></div>'
         );
-        window.myStore.companyName = item.name;
     }
 
     //Select company
-    window.selectCompany = function(companyId){
+    window.selectCompany = function(companyId,companyName){
         window.myStore.companyId = companyId;
+        window.myStore.companyName = companyName;
         // Get company's offices
         window.getOffices(companyId);
     };

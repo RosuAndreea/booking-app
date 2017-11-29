@@ -12,11 +12,8 @@
     // Take the offices for the booking select office
     function renderOffices (office){
         $selectAnOffice.append(
-            '<a class="list-group-item" onclick="selectOffice('+ office.id +')">' + office.officeName + '</a>'   
+            '<a class="list-group-item" onclick="selectOffice(\''+ office.id +  '\',\'' + office.officeEmail + '\',\'' + office.officeAddress +  '\',\'' + office.officePhone +'\')">' + office.officeName + '</a>'   
         );
-        window.myStore.officeAddress = office.officeAddress;
-        window.myStore.officeEmail = office.officeEmail;
-        window.myStore.officePhone = office.officePhone;
     }
     // Take the details about the selected office for the booking select office
     function showOfficeDetails (email, address, phone) {
@@ -34,6 +31,9 @@
 
     window.selectOffice = function(officeId, officeEmail, officeAddress, officePhone) {
         window.myStore.officeId = officeId;
+        window.myStore.officeEmail = officeEmail;
+        window.myStore.officeAddress = officeAddress;
+        window.myStore.officePhone = officePhone;
         showOfficeDetails(officeEmail, officeAddress, officePhone);
         window.getServices(officeId);
     };

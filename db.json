@@ -61,21 +61,24 @@
       "officeEmail": "email@yahoo.com",
       "officeAddress": "Enescu",
       "officePhone": "0756891753",
-      "id": 4
+      "id": 4,
+      "companyId": 2
     },
     {
       "officeName": "Office-test2",
       "officeEmail": "",
       "officeAddress": "",
       "officePhone": "",
-      "id": 5
+      "id": 5,
+      "companyId": 2
     },
     {
       "officeName": "Office-test7",
       "officeEmail": "kfgnhj",
       "officeAddress": "yghjnyj",
       "officePhone": "jyjf",
-      "id": 6
+      "id": 6,
+      "companyId": 2
     }
   ],
   "services": [

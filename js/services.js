@@ -21,17 +21,18 @@
             +'<div class="card-text">'
             +'<p id="service-detail-text">' + service.serviceDescription + '</p>'
             +'<button id="booking-time">' + service.serviceTime + '</button>'
-            +'<button class="selectDate" onclick="selectService('+ service.id +')">Select</button>'
+            +'<button class="selectDate" onclick="selectService(\'' + service.id +'\',\'' + service.serviceName +'\',\'' + service.servicePrice + '\',\''+ service.serviceTime +'\',\'' + service.serviceDescription + '\')">Select</button>'
             +'</div></div></div></div>'
         );
-        window.myStore.serviceName = service.serviceName;
-        window.myStore.servicePrice = service.servicePrice;
-        window.myStore.serviceTime = service.serviceTime;
-        window.myStore.serviceDescription = service.serviceDescription;
+       
     };
     
-    window.selectService = function(serviceId) {
-        window.myStore.serviceId = serviceId;  
+    window.selectService = function(serviceId, serviceName, servicePrice, serviceDescription, serviceTime) {
+        window.myStore.serviceId = serviceId;
+        window.myStore.serviceName = serviceName; 
+        window.myStore.servicePrice = servicePrice; 
+        window.myStore.serviceDescription = serviceDescription; 
+        window.myStore.serviceTime = serviceTime;
     };
     
 // take the data from db/services
