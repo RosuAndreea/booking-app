@@ -16,7 +16,7 @@
         );
     }
     // Take the details about the selected office for the booking select office
-    function showOfficeDetails (email, address, phone) {
+    function showOfficeDetails (id, email, address, phone) {
         $detailsWrapper.empty();
         $detailsWrapper.append(
             '<p class = "company-detail">Email:</p>'
@@ -25,7 +25,7 @@
             +'<p>' + phone + '</p>'
             +'<p class = "company-detail">Address:</p>'
             +'<p>' + address + '</p>'
-            +'<button id="selectServ">Next</button>'
+            +'<button id="selectServ" onclick="selectTheService(' + id + ')">Next</button>'
         );
     }
 
@@ -34,9 +34,12 @@
         window.myStore.officeEmail = officeEmail;
         window.myStore.officeAddress = officeAddress;
         window.myStore.officePhone = officePhone;
-        showOfficeDetails(officeEmail, officeAddress, officePhone);
-        window.getServices(officeId);
+        showOfficeDetails(officeId, officeEmail, officeAddress, officePhone);
     };
+
+    window.selectTheService = function (id) {
+        window.getServices(id);
+    }
  
  // take the data from db/offices
     window.getOffices = function(companyId){
