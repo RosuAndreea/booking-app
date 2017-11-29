@@ -137,6 +137,25 @@
       "customerEmail": "booking1@yahoo.com",
       "customerPhone": "0231456891",
       "id": 2
+    },
+    {
+      "companyId": "1",
+      "companyName": "Company1",
+      "officeId": "1",
+      "officeEmail": "andreea@yahoo.com",
+      "officeAddress": "Marasesti",
+      "officePhone": "0756891756",
+      "serviceId": "2",
+      "serviceName": "Serv2",
+      "servicePrice": "55E",
+      "serviceDescription": "1h",
+      "serviceTime": "serv2 description",
+      "data": "01/01/2017 - 01/31/2017",
+      "customerFname": "",
+      "customerLname": "",
+      "customerEmail": "",
+      "customerPhone": "",
+      "id": 3
     }
   ]
 }

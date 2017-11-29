@@ -21,7 +21,7 @@
             +'<div class="card-text">'
             +'<p id="service-detail-text">' + service.serviceDescription + '</p>'
             +'<button id="booking-time">' + service.serviceTime + '</button>'
-            +'<button class="selectDate" onclick="selectService(\'' + service.id +'\',\'' + service.serviceName +'\',\'' + service.servicePrice + '\',\''+ service.serviceTime +'\',\'' + service.serviceDescription + '\')">Select</button>'
+            +'<button class="selectDate" onclick="selectService(\'' + service.id +'\',\'' + service.serviceName +'\',\'' + service.servicePrice + '\',\''+ service.serviceDescription  +'\',\'' + service.serviceTime + '\')">Select</button>'
             +'</div></div></div></div>'
         );
        

@@ -74,7 +74,7 @@
             +'<td><span class="noedit phone">' + office.officePhone + '</span><input class="edit-input phone"/></td>'
             +'<td><span class="noedit view"><a href="services.html"><button class="more">View more</button></a></td>'
             +'<td><i class="fa fa-pencil edit noedit edit-off" aria-hiddesn="true"></i>'
-            +'<i class="fa fa-trash edit remove-off" aria-hidden="true" data-id="{{id}}"></i>'
+            +'<i class="fa fa-trash edit remove-off" aria-hidden="true"></i>'
             +'<i class="fa fa-floppy-o edit-input edit save-off" aria-hidden="true"></i>'
             +'<i class="fa fa-times edit-input edit remove-edit" aria-hidden="true"></i></td>'
             +'</tr>'
