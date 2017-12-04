@@ -7,8 +7,21 @@
     var $offPhone = $('#add-off-phone');
     var $selectAnOffice = $('.list-group');
     var $detailsWrapper = $('.office-details');
+    var $companyData = $('.booking-summary');
     var ApiUrl = window.ApiUrl;
- 
+    
+    //Render the booking details
+    $('#select-comp').delegate('#selectOff','click', function() {
+        $companyData.append(
+          '<div class="company-booking">'
+          +'<span class = "comp-left-side">Company name: </span>'
+          +'<span class = "comp-right-side">'+ myStore.companyName + "</span>"
+          +'<span class = "comp-left-side">Details: </span>'
+          +'<span class = "comp-right-side">' + myStore.companyDetails + "</span>"
+          +'</div>'
+        );
+    });
+
     // Take the offices for the booking select office
     function renderOffices (office){
         $selectAnOffice.append(
