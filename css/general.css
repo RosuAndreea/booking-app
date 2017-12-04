@@ -91,9 +91,11 @@ footer {
 
 .company-details{
 	color: #CCC;
-	text-align: center;
-	padding-bottom: 50px;
-	margin-top: 100px;
+    text-align: center;
+    padding-bottom: 50px;
+    margin-top: 50px;
+    display: inline-block;
+    margin-left: 40%;
 }
 .company-detail{
 	color: gold;
@@ -377,4 +379,35 @@ content:counter(section);
 	text-align: left;
 	padding-left: 20px;
 	font-size: 18px;
+}
+
+.company-booking {
+	float: left;
+	border-bottom: 1px solid #CCC;
+	padding-bottom: 20px;
+	margin: 0 8%;
+}
+.serv-book-left {
+	width: 20%;
+    margin-right: 0px;
+    display: inline-block;
+    margin-left: 50px;
+    color: #b3b3ff;
+    text-align: left;
+    font-size: 18px;
+}
+.serv-book-right {
+	width: 60%;
+    display: inline-block;
+    padding-bottom: 5px;
+	font-size: 18px;
+	vertical-align: top;
+}
+.booking-service {
+	min-height: 115px;
+    border-bottom: 1px solid #ccc;
+}
+.booking-calendar {
+	border-bottom: 1px solid #ccc;
+    min-height: 140px;
 }
