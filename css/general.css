@@ -38,6 +38,9 @@ footer {
 	padding-top: 20px;
 	margin-top: 60%;
 }
+h2 {
+	padding-bottom: 20px;
+}
 
 /*-----------------------CARDS--------------------*/
 .hvr-pulse .waves-effect{
@@ -355,12 +358,12 @@ content:counter(section);
 }
 .company-side{
 	float: left;
-	width: 45%;
+	width: 50%;
 	text-align: center;
 }
 .service-side{
 	float: right;
-	width: 45%;
+	width: 50%;
 	text-align: center;
 }
 .comp-left-side, .serv-left-side {
@@ -410,4 +413,10 @@ content:counter(section);
 .booking-calendar {
 	border-bottom: 1px solid #ccc;
     min-height: 140px;
+}
+.customer-booking {
+	float: left;
+	padding-bottom: 20px;
+	margin: 0 25% 0 0;
+	
 }

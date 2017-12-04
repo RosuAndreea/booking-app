@@ -156,6 +156,26 @@
       "customerEmail": "",
       "customerPhone": "",
       "id": 3
+    },
+    {
+      "companyId": "1",
+      "companyName": "Company1",
+      "companyDetails": "test1 fdsvgzd dbvgdfb gfb cf fbngfn gfnb gfcv fnb gfbn cfxbhv ftb bfgtbv cftrhbtfgcv tbn fgtr",
+      "officeId": "1",
+      "officeEmail": "andreea@yahoo.com",
+      "officeAddress": "Marasesti",
+      "officePhone": "0756891756",
+      "serviceId": "1",
+      "serviceName": "Serv1",
+      "servicePrice": "22E",
+      "serviceDescription": "descriere1",
+      "serviceTime": "12h",
+      "data": "01/01/2017 - 01/31/2017",
+      "customerFname": "Andreea",
+      "customerLname": "Alupoaei",
+      "customerEmail": "andreeaalupoaei@yahoo.com",
+      "customerPhone": "0756891756",
+      "id": 4
     }
   ]
 }
