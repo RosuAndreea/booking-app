@@ -6,6 +6,7 @@
    var $servTime = $('#add-serv-time');
    var $servDescription = $('#add-serv-description');
    var $servWrapper = $('#service-panel');
+   var $bookingData = $('.booking-service');
    var ApiUrl = window.ApiUrl;
 
 // -----------------------Booking page -------------------------
@@ -34,6 +35,27 @@
         window.myStore.serviceDescription = serviceDescription; 
         window.myStore.serviceTime = serviceTime;
     };
+
+    //Render booking details
+    $('#select-off').delegate('#selectServ','click', function() {  
+
+        $bookingData.append(
+            '<div class = company-side>'
+            +'<span class = "comp-left-side">Company name: </span>'
+            +'<span class = "comp-right-side">'+ myStore.companyName + "</span>"
+            +'<span class = "comp-left-side">Details: </span>'
+            +'<span class = "comp-right-side">' + myStore.companyDetails + "</span>"
+            +'</div>'
+            +'<div class="service-side">'
+            +'<span class = "serv-left-side">Email: </span>'
+            +'<span class = "serv-right-side">' + myStore.officeEmail + "</span>"
+            +'<span class = "serv-left-side">Address: </span>'
+            +'<span class = "serv-right-side">' + myStore.officeAddress + '</span>'
+            +'<span class = "serv-left-side">Phone: </span>'
+            +'<span class = "serv-right-side">' + myStore.officePhone + '</span>'
+            +'</div>'  
+        );
+    });
     
 // take the data from db/services
     window.getServices = function(officeId){
