@@ -23,7 +23,7 @@
 
     $.ajax({
         type: "GET",
-        url: ApiUrl + 'companies?id=1',
+        url: ApiUrl + 'companies',
         success: function (companies){
             console.log('companies ', companies)
             $.each(companies, function (i, companies){

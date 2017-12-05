@@ -141,21 +141,20 @@
     });
 
     // SignIn
-    $('.login').on('click', function(){
-        var $email = $('.uname').val();
-        var $password = $('.psw').val();
+    $('.login').on('click', function(id){
+        var $email = $('#login-uname').val();
+        var $password = $('#login-psw').val();
         var error = true;
 
         $.ajax({
             type: "GET",
-            url: ApiUrl +'companies',
+            url: ApiUrl +'companies?id=' + id,
             dataType: "json",
             success: function(data){
                 
                 $.each(data, function(key, value){
                     
                     if($email == value.email && $password == value.password){
-                        console.log('dfs');
                         error = false;
                     }
                 });
@@ -169,8 +168,5 @@
             }
         });
         return false;
-    
     });
-    
-
 })();
