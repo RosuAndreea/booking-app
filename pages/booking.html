@@ -6,12 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
+	<link rel='stylesheet' href='https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css'>
 	<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../css/general.css">
 	<link rel="stylesheet" href="../css/hover.css">
 	<link rel="stylesheet" href="../css/login.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
 	
 </head>
 <body>
@@ -32,7 +32,7 @@
 	</nav>
 	<div class='content'>
 		<h1 class='company-details'>Booking list</h1>
-		<table class='table table-hover'>
+		<table class='table table-bordered' id='data-table'>
 			<thead>
 			    <tr>
 				    <th>Nr.Crt.</th>
@@ -42,24 +42,21 @@
 				    <th>Client Name</th>
 			    </tr>
 			</thead>
-			<tbody>
-			    <tr>
-			        <td>John</td>
-			        <td>Doe</td>
-			        <td>john@example.com</td>
-			        <td>Doe</td>
-			        <td>john@example.com</td>
-			    </tr>
-			</tbody>
   		</table>
 	</div>
 	<footer>
 		<p>Copyright by BookingApp</p>
 	</footer>
-	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js'></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
+	<script src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js'></script>
+	<script type="text/javascript" src='../js/booking.js'></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/store.js"></script>
 
 </body>
 </html>

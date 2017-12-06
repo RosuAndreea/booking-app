@@ -140,7 +140,7 @@
         });
     });
 
-    // SignIn
+    // LogIn
     $('.login').on('click', function(id){
         var $email = $('#login-uname').val();
         var $password = $('#login-psw').val();
@@ -148,7 +148,7 @@
 
         $.ajax({
             type: "GET",
-            url: ApiUrl +'companies?id=' + id,
+            url: ApiUrl +'companies',
             dataType: "json",
             success: function(data){
                 
