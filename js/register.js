@@ -169,4 +169,11 @@
         });
         return false;
     });
+
+
+    // LogOut
+    $('#logOut').on('click',function(){
+        document.location= 'index.html';
+    });
+
 })();
