@@ -29,6 +29,11 @@
 	width: 70%;
 	margin: 0 auto;
 }
+.profile-content{
+	width: 70%;
+	margin: 120px auto;
+
+}
 footer {
 	width: 100%;
 	background-color: #222;
@@ -82,7 +87,7 @@ h2 {
 }
 .upload-img{
 	width: 150px;
-	margin: 50px 150px;
+	margin: 35px 150px;
 }
 
 .details-side{
@@ -100,6 +105,13 @@ h2 {
     display: inline-block;
     margin-left: 40%;
 }
+.company-profile{
+	color: #CCC;
+    text-align: center;
+    padding-bottom: 50px;
+    margin-top: 50px;
+    display: inline-block;
+}
 .company-detail{
 	color: gold;
 	font-size: 22px;
@@ -108,9 +120,11 @@ h2 {
 	width: 150px;
 	float: right;
 	font-size: 15px !important;
+	margin-top: 30px;
 }
 #file {
 	margin-left: 100px;
+	margin-top: 20px;
 }
 
 .details-side .edit-input {
@@ -143,6 +157,7 @@ h2 {
 	width: 150px;
 	float: right;
 	margin-bottom: 30px;
+	margin-top: 50px;
 }
 
 .more {
