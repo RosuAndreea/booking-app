@@ -64,7 +64,7 @@
                 console.log('offices ', offices)
                 $.each(offices, function (i, office){
                    renderOffices(office);
-                   addOffice(office);
+                   
                 });
             },
             error: function (err){
@@ -94,6 +94,22 @@
             +'</tr>'
         );
     }
+    $.ajax({
+        type: "GET",
+        url: ApiUrl + 'offices?companyId=' + localStorage.companyId,
+        success: function (offices){
+            console.log('offices ', offices)
+            $.each(offices, function (i, office){
+               addOffice(office);
+               
+            });
+        },
+        error: function (err){
+            console.log('Err ', err);
+            //alert('Error loading services');
+        }
+
+    });
 
  // add offices
     $('.add-btn').on('click',function (){
@@ -101,16 +117,18 @@
             officeName: $offName.val(),
             officeEmail: $offEmail.val(),
             officeAddress: $offAddress.val(),
-            officePhone: $offPhone.val()
+            officePhone: $offPhone.val(),
+            companyId: localStorage.companyId
         };
 
         $.ajax({
             type: "POST",
-            url: ApiUrl + 'offices',
+            url: ApiUrl + 'offices?companyId=' + localStorage.companyId,
             data: offices,
             success: function (newOffice) {
                  addOffice(newOffice);
                  alert('You create a new office with success!');
+                 localStorage.setItem('officeId',newOffice.id);
             },
             error: function () {
                  alert('Error saving the office');
@@ -126,7 +144,7 @@
  
         $.ajax({
             type: 'DELETE',
-            url: ApiUrl + 'offices' + $(this).attr('data-id'),
+            url: ApiUrl + 'offices/',
             success: function (){
                 $(self);
                 $tr.fadeOut(300, function(){
@@ -164,19 +182,19 @@
         };
         $.ajax({
             type: "PUT",
-            url: ApiUrl + 'offices/' + $tr.attr('data-id'),
+            url: ApiUrl + 'offices/',
             data: offices,
-            success: function (newOffice) {
-                $tr.find('span.off-name').html(office.officeName);
-                $tr.find('span.email').html(office.officeEmail);
-                $tr.find('span.address').html(office.officeAddress);
-                $tr.find('span.phone').html(office.officePhone);
-                $tr.removeClass('edit-input');
-                alert('You create a new office with success!');
+            success: function () {
+                $tr.find('span.off-name').html(offices.officeName);
+                $tr.find('span.email').html(offices.officeEmail);
+                $tr.find('span.address').html(offices.officeAddress);
+                $tr.find('span.phone').html(offices.officePhone);
             },
-            error: function () {
+            error: function (err) {
+                console.log('Err ', err);
                 alert('Error updating office');
             }
         });
+        $tr.removeClass('edit-input');
     });
 })();

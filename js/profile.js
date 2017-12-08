@@ -64,10 +64,12 @@
         $div.addClass('edit-input');
     });
 
+// remove edit
     $detailSide.delegate('.remove-edit', 'click', function () {
         $(this).closest('.details-side').removeClass('edit-input');
     });
-
+    
+// save edit
     $detailSide.delegate('.save-edit', 'click', function() {
         var $div = $(this).closest('.details-side');
         var companies = {

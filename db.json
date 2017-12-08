@@ -40,12 +40,8 @@
       "companyId": 1
     },
     {
-      "officeName": "Office2",
-      "officeEmail": "santa@gmail.com",
-      "officeAddress": "Marasesti",
-      "officePhone": "0756891756",
-      "id": 2,
-      "companyId": 1
+      "officeName": "Office-test2",
+      "id": 2
     },
     {
       "officeName": "Office3",
@@ -78,6 +74,14 @@
       "officePhone": "jyjf",
       "id": 6,
       "companyId": 2
+    },
+    {
+      "officeName": "Office-test8",
+      "officeEmail": "email8@yahoo.com",
+      "officeAddress": "donici",
+      "officePhone": "0756891753",
+      "companyId": "2",
+      "id": 7
     }
   ],
   "services": [
