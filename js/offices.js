@@ -80,7 +80,7 @@
     
     function addOffice (office) {
         $officeData.append(
-            '<tr class="offices-data" data-id="{{id}}">'
+            '<tr class="offices-data">'
             +'<td class = "count"></td>' 
             +'<td><span class="noedit off-name">' + office.officeName + '</span><input class="edit-input off-name"/></td>' 
             +'<td><span class="noedit email">' + office.officeEmail + '</span><input class="edit-input email"/></td>'
@@ -101,8 +101,9 @@
             console.log('offices ', offices)
             $.each(offices, function (i, office){
                addOffice(office);
-               
+               localStorage.setItem('officeId',office.id);
             });
+            
         },
         error: function (err){
             console.log('Err ', err);
@@ -128,7 +129,6 @@
             success: function (newOffice) {
                  addOffice(newOffice);
                  alert('You create a new office with success!');
-                 localStorage.setItem('officeId',newOffice.id);
             },
             error: function () {
                  alert('Error saving the office');

@@ -65,7 +65,6 @@
             success: function (services){
                 console.log('services ', services)
                 $.each(services, function (i, service){
-                    addService(service);
                     bookingServices (service);
                 });
             },
@@ -95,18 +94,34 @@
         );
     };
 
+    $.ajax({
+        type: "GET",
+        url: ApiUrl + 'services?officeId=' + localStorage.officeId,
+        success: function (services){
+            console.log('services ', services)
+            $.each(services, function (i, service){
+                addService(service);
+            });
+        },
+        error: function (err){
+            console.log('Err ', err);
+            //alert('Error loading services');
+        }
+    });
+
 // add service
     $('.add-btn').on('click',function (){
         var services = {
             serviceName: $servName.val(),
             servicePrice: $servPrice.val(),
             serviceTime: $servTime.val(),
-            serviceDescription: $servDescription.val()
+            serviceDescription: $servDescription.val(),
+            officeId: localStorage.officeId
         };
 
         $.ajax({
             type: "POST",
-            url: ApiUrl + 'services',
+            url: ApiUrl + 'services?officeId=' + localStorage.officeId,
             data: services,
             success: function (newService) {
                 addService(newService);
