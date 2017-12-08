@@ -81,7 +81,7 @@
 
         $.ajax({
             type: "PUT",
-            url: ApiUrl + 'companies?id=1',
+            url: ApiUrl + 'companies/' + localStorage.companyId,
             data: companies,
             success: function(){
                 $div.find('span.comp-name').html(companies.name);
@@ -96,6 +96,8 @@
                 //alert('Error loading services');
             }
         });
+
+        $(this).closest('.details-side').removeClass('edit-input');
     });
         
 })();

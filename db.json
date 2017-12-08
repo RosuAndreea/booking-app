@@ -4,10 +4,9 @@
       "name": "Company1",
       "email": "email1@yahoo.com",
       "password": "demo",
+      "address": "Marasesti",
+      "phone": "0123456789",
       "details": "test1 fdsvgzd dbvgdfb gfb cf fbngfn gfnb gfcv fnb gfbn cfxbhv ftb bfgtbv cftrhbtfgcv tbn fgtr",
-      "address": "",
-      "phone": "",
-      "logo": "",
       "id": 1
     },
     {
