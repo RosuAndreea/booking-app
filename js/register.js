@@ -155,6 +155,7 @@
                 $.each(data, function(key, value){
                     
                     if($email == value.email && $password == value.password){
+                        localStorage.setItem('companyId',value.id);
                         error = false;
                     }
                 });
@@ -174,6 +175,7 @@
     // LogOut
     $('#logOut').on('click',function(){
         document.location= 'index.html';
+        localStorage.removeItem('companyId');
     });
 
 })();
