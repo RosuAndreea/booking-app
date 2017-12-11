@@ -184,7 +184,7 @@
         };
         $.ajax({
             type: "PUT",
-            url: ApiUrl + 'offices/',
+            url: ApiUrl + 'offices/' + $(this).attr('data-id') ,
             data: offices,
             success: function () {
                 $tr.find('span.off-name').html(offices.officeName);
