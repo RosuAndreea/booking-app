@@ -80,7 +80,7 @@
 
     function addService (service) {
         $serviceData.append(
-            '<tr class="services-data" data-id="{{id}}">'
+            '<tr class="services-data">'
             +'<td class = "count"></td>'  
             +'<td><span class="noedit serv-name">' + service.serviceName + '</span><input class="edit-input serv-name"/></td>' 
             +'<td><span class="noedit price">' + service.servicePrice + '</span><input class="edit-input price"/></td>'
@@ -89,7 +89,7 @@
             +'<td><i class="fa fa-pencil edit noedit edit-serv" aria-hiddesn="true"></i>'
             +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="{{id}}"></i>'
             +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>'
-            +'<i class="fa fa-times edit-input edit remove-edit" data-id="{{id}}" aria-hidden="true"></i></td>'
+            +'<i class="fa fa-times edit-input edit remove-edit" aria-hidden="true"></i></td>'
             +'</tr>'
         );
     };
@@ -138,7 +138,6 @@
    $serviceData.delegate('.remove-serv','click', function(){
         var $tr = $(this).closest('.service-data');
         var self = this;
-        console.log('fer');
 
         $.ajax({
             url: ApiUrl + 'services' + $(this).attr('data-id'),

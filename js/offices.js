@@ -139,7 +139,7 @@
  
  //    delete offices
     $officeData.delegate('.remove-off','click', function(){
-        var $tr = $(this).closest('.office-data');
+        var $tr = $(this).closest('.offices-data');
         var self = this;
  
         $.ajax({
@@ -159,9 +159,9 @@
     $officeData.delegate('.edit-off','click', function(){
         var $tr = $(this).closest('.offices-data');
         $tr.find('input.off-name').val( $tr.find('span.off-name').html() );
-        $tr.find('input.off-email').val( $tr.find('span.off-email').html() );
-        $tr.find('input.off-address').val( $tr.find('span.off-address').html() );
-        $tr.find('input.off-phone').val( $tr.find('span.off-phone').html() );
+        $tr.find('input.email').val( $tr.find('span.email').html() );
+        $tr.find('input.address').val( $tr.find('span.address').html() );
+        $tr.find('input.phone').val( $tr.find('span.phone').html() );
         $tr.addClass('edit-input');
          
     });   
@@ -176,9 +176,9 @@
         var $tr = $(this).closest('.offices-data');
         var offices = {
             officeName: $tr.find('input.off-name').val(),
-            officeEmail: $tr.find('input.off-email').val(),
-            officeAddress: $tr.find('input.off-address').val(),
-            officePhone: $tr.find('input.off-phone').val()
+            officeEmail: $tr.find('input.email').val(),
+            officeAddress: $tr.find('input.address').val(),
+            officePhone: $tr.find('input.phone').val()
         };
         $.ajax({
             type: "PUT",

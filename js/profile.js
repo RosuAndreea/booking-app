@@ -3,21 +3,22 @@
     $detailSide = $('.details-side');
 
     function profileDetails(companies) {
-        $detailSide.append('<p class="company-detail">Company Name: </p>'
-                            +'<span class="noedit comp-name">' + companies.name + '</span><input class="edit-input comp-name"/>'
-                            +'<p class="company-detail">Email: </p>'
-                            +'<span class="noedit comp-email">' + companies.email + '</span><input class="edit-input comp-email"/>'
-                            +'<p class="company-detail">Password: </p>'
-                            +'<span class="noedit comp-password">' + companies.password + '</span><input class="edit-input comp-password"/>'
-                            +"<p class='company-detail'>Address: </p>"
-                            +'<span class="noedit comp-address">' + companies.address + '</span><input class="edit-input comp-address"/>'
-                            +"<p class='company-detail'>Phone: </p>"
-                            +'<span class="noedit comp-phone">' + companies.phone + '</span><input class="edit-input comp-phone"/>'
-                            +"<p class='company-detail'>Details: </p>"
-                            +'<span class="noedit comp-details">' + companies.details + '</span><input class="edit-input comp-details"/>'
-                            +'<button class="edit-profile hvr-radial-in edit noedit">Edit profile</button>'
-                            +'<i class="fa fa-floppy-o edit-input edit save-edit" aria-hidden="true"></i>'
-                            +'<i class="fa fa-times edit-input edit remove-edit" data-id="{{id}}" aria-hidden="true"></i></td>'
+        $detailSide.append(
+            '<p class="company-detail">Company Name: </p>'
+            +'<span class="noedit comp-name">' + companies.name + '</span><input class="edit-input comp-name"/>'
+            +'<p class="company-detail">Email: </p>'
+            +'<span class="noedit comp-email">' + companies.email + '</span><input class="edit-input comp-email"/>'
+            +'<p class="company-detail">Password: </p>'
+            +'<span class="noedit comp-password">' + companies.password + '</span><input class="edit-input comp-password"/>'
+            +"<p class='company-detail'>Address: </p>"
+            +'<span class="noedit comp-address">' + companies.address + '</span><input class="edit-input comp-address"/>'
+            +"<p class='company-detail'>Phone: </p>"
+            +'<span class="noedit comp-phone">' + companies.phone + '</span><input class="edit-input comp-phone"/>'
+            +"<p class='company-detail'>Details: </p>"
+            +'<span class="noedit comp-details">' + companies.details + '</span><input class="edit-input comp-details"/>'
+            +'<button class="edit-profile hvr-radial-in edit noedit">Edit profile</button>'
+            +'<i class="fa fa-floppy-o edit-input edit save-edit" aria-hidden="true"></i>'
+            +'<i class="fa fa-times edit-input edit remove-edit" data-id="{{id}}" aria-hidden="true"></i></td>'
         );
     }
 

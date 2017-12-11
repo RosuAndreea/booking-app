@@ -40,10 +40,6 @@
       "companyId": 1
     },
     {
-      "officeName": "Office-test2",
-      "id": 2
-    },
-    {
       "officeName": "Office3",
       "officeEmail": "email@yahoo.com",
       "officeAddress": "Enescu",
@@ -82,6 +78,22 @@
       "officePhone": "0756891753",
       "companyId": "2",
       "id": 7
+    },
+    {
+      "officeName": "Office-test9",
+      "officeEmail": "office9-2@yahoo.com",
+      "officeAddress": "tudoras",
+      "officePhone": "0123456789",
+      "companyId": "2",
+      "id": 8
+    },
+    {
+      "officeName": "Office-test10",
+      "officeEmail": "email10@yahoo.com",
+      "officeAddress": "bucuresti",
+      "officePhone": "0123356789",
+      "companyId": "2",
+      "id": 9
     }
   ],
   "services": [
@@ -100,6 +112,30 @@
       "serviceDescription": "serv2 description",
       "id": 2,
       "officeId": 7
+    },
+    {
+      "serviceName": "service1",
+      "servicePrice": "22",
+      "serviceTime": "2",
+      "serviceDescription": "service1 office 1 comp2",
+      "officeId": "4",
+      "id": 3
+    },
+    {
+      "serviceName": "service2",
+      "servicePrice": "22$",
+      "serviceTime": "5",
+      "serviceDescription": "service2 office 9 comp2",
+      "officeId": "4",
+      "id": 4
+    },
+    {
+      "serviceName": "service3",
+      "servicePrice": "50E",
+      "serviceTime": "40min",
+      "serviceDescription": "serv2 description",
+      "officeId": "9",
+      "id": 5
     }
   ],
   "booking": [
@@ -144,6 +180,27 @@
       "customerEmail": "test2@yahoo.com",
       "customerPhone": "01234566789",
       "id": 2
+    },
+    {
+      "companyId": "2",
+      "companyName": "Company2",
+      "companyDetails": "test2",
+      "officeId": "4",
+      "officeEmail": "email@yahoo.com",
+      "officeAddress": "Enescu",
+      "officePhone": "0756891753",
+      "officeName": "Office-test",
+      "serviceId": "3",
+      "serviceName": "service1",
+      "servicePrice": "22",
+      "serviceDescription": "service1 office 1 comp2",
+      "serviceTime": "2",
+      "data": "02/08/2017 - 02/16/2017",
+      "customerFname": "customer1",
+      "customerLname": "customer1-l",
+      "customerEmail": "customer1@yahoo.com",
+      "customerPhone": "0123456789",
+      "id": 3
     }
   ]
 }
