@@ -88,8 +88,8 @@
             +'<td><span class="noedit phone">' + office.officePhone + '</span><input class="edit-input phone"/></td>'
             +'<td><span class="noedit view"><a href="services.html"><button class="more">View more</button></a></td>'
             +'<td><i class="fa fa-pencil edit noedit edit-off" aria-hiddesn="true"></i>'
-            +'<i class="fa fa-trash edit remove-off" aria-hidden="true"></i>'
-            +'<i class="fa fa-floppy-o edit-input edit save-off" aria-hidden="true"></i>'
+            +'<i class="fa fa-trash edit remove-off" aria-hidden="true"  data-id="'+ office.id +'"></i>'
+            +'<i class="fa fa-floppy-o edit-input edit save-off" aria-hidden="true" data-id="'+ office.id +'"></i>'
             +'<i class="fa fa-times edit-input edit remove-edit" aria-hidden="true"></i></td>'
             +'</tr>'
         );
@@ -138,13 +138,15 @@
      
  
  //    delete offices
-    $officeData.delegate('.remove-off','click', function(){
+    $officeData.delegate('.remove-off','click', function(e){
         var $tr = $(this).closest('.offices-data');
         var self = this;
+        e.preventDefault();
+        
  
         $.ajax({
             type: 'DELETE',
-            url: ApiUrl + 'offices/',
+            url: ApiUrl + 'offices/' + $(this).attr('data-id') ,
             success: function (){
                 $(self);
                 $tr.fadeOut(300, function(){
