@@ -97,10 +97,10 @@
       "id": 4
     },
     {
-      "serviceName": "service3",
-      "servicePrice": "50E",
+      "serviceName": "Serv1",
+      "servicePrice": "22$",
       "serviceTime": "40min",
-      "serviceDescription": "serv2 description",
+      "serviceDescription": "service1 office 1 comp2",
       "officeId": "9",
       "id": 5
     }
@@ -126,27 +126,6 @@
       "customerEmail": "test1@yahoo.com",
       "customerPhone": "0756891756",
       "id": 1
-    },
-    {
-      "companyId": "1",
-      "companyName": "Company1",
-      "companyDetails": "test1 fdsvgzd dbvgdfb gfb cf fbngfn gfnb gfcv fnb gfbn cfxbhv ftb bfgtbv cftrhbtfgcv tbn fgtr",
-      "officeId": "1",
-      "officeEmail": "andreea@yahoo.com",
-      "officeAddress": "Marasesti",
-      "officePhone": "0756891756",
-      "officeName": "Office1",
-      "serviceId": "2",
-      "serviceName": "Serv2",
-      "servicePrice": "55E",
-      "serviceDescription": "serv2 description",
-      "serviceTime": "1h",
-      "data": "01/09/2018 - 01/19/2018",
-      "customerFname": "name2",
-      "customerLname": "last-name2",
-      "customerEmail": "test2@yahoo.com",
-      "customerPhone": "01234566789",
-      "id": 2
     },
     {
       "companyId": "2",

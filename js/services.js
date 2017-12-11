@@ -87,8 +87,8 @@
             +'<td><span class="noedit time">' + service.serviceTime + '</span><input class="edit-input time"/></td>'
             +'<td><span class="noedit description">' + service.serviceDescription + '</span><input class="edit-input description"/></td>'
             +'<td><i class="fa fa-pencil edit noedit edit-serv" aria-hiddesn="true"></i>'
-            +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="{{id}}"></i>'
-            +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true"></i>'
+            +'<i class="fa fa-trash edit remove-serv" aria-hidden="true" data-id="'+ service.id +'"></i>'
+            +'<i class="fa fa-floppy-o edit-input edit save-serv" aria-hidden="true" data-id="'+ service.id +'"></i>'
             +'<i class="fa fa-times edit-input edit remove-edit" aria-hidden="true"></i></td>'
             +'</tr>'
         );
@@ -135,15 +135,16 @@
 
 
 //    delete services
-   $serviceData.delegate('.remove-serv','click', function(){
+   $serviceData.delegate('.remove-serv','click', function(e){
         var $tr = $(this).closest('.service-data');
         var self = this;
+        e.preventDefault();
 
         $.ajax({
-            url: ApiUrl + 'services' + $(this).attr('data-id'),
             type: "DELETE",
-            contentType: "application/json",
+            url: ApiUrl + 'services/' + $(this).attr('data-id'),
             success: function (){
+                $(self);
                 $tr.fadeOut(300, function(){
                     $(this).remove();
                 });
@@ -179,7 +180,7 @@
             serviceDescription: $tr.find('input.description').val()
         };
         $.ajax({
-            url: ApiUrl + 'services' + $tr.attr('data-id'),
+            url: ApiUrl + 'services/' + $(this).attr('data-id'),
             type: 'PUT',
             contentType: "json",
             data: services,
@@ -189,7 +190,6 @@
                 $tr.find('span.time').html(services.serviceTime);
                 $tr.find('span.description').html(services.serviceDescription);
                 $tr.removeClass('edit-input');
-                alert('You create a new service with success!');
             },
             error: function () {
                 alert('Error updating service');
