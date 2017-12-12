@@ -113,7 +113,6 @@
     });
     
     // Sign Up
-
     $('.signupbtn').on('click', function (){
         var companies = {
             name: $name.val(),
@@ -135,7 +134,7 @@
                 window.location = 'file:///home/assist/workspace/booking-app/pages/index.html';
             },
             error: function (){
-               alert('Eroare'); 
+               alert('Error'); 
             }
         });
     });
@@ -153,7 +152,6 @@
             success: function(data){
                 
                 $.each(data, function(key, value){
-                    
                     if($email == value.email && $password == value.password){
                         localStorage.setItem('companyId',value.id);
                         error = false;

@@ -38,11 +38,9 @@
             },
             error: function (err){
                 console.log('Err ', err);
-                //alert('Error loading services');
             }
-
         });
-   }
+    }
    //Call the function
    getCompanies();
 })();

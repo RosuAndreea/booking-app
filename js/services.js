@@ -57,7 +57,7 @@
         );
     });
     
-// take the data from db/services
+    // take the data from db/services
     window.getServices = function(officeId){
         $.ajax({
             type: "GET",
@@ -70,7 +70,6 @@
             },
             error: function (err){
                 console.log('Err ', err);
-                //alert('Error loading services');
             }
         });
     }
@@ -105,11 +104,10 @@
         },
         error: function (err){
             console.log('Err ', err);
-            //alert('Error loading services');
         }
     });
 
-// add service
+    // add service
     $('.add-btn').on('click',function (){
         var services = {
             serviceName: $servName.val(),
@@ -134,8 +132,8 @@
     });
 
 
-//    delete services
-   $serviceData.delegate('.remove-serv','click', function(e){
+    // delete services
+    $serviceData.delegate('.remove-serv','click', function(e){
         var $tr = $(this).closest('.service-data');
         var self = this;
         e.preventDefault();
@@ -160,9 +158,7 @@
         $tr.find('input.price').val( $tr.find('span.price').html() );
         $tr.find('input.time').val( $tr.find('span.time').html() );
         $tr.find('input.description').val( $tr.find('span.description').html() );
-        $tr.addClass('edit-input');
-        console.log('hi');
-        
+        $tr.addClass('edit-input');   
     });   
      
     // remove edit

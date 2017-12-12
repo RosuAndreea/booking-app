@@ -27,14 +27,11 @@
         url: ApiUrl + 'companies/' + localStorage.companyId,
         success: function (companies){
             console.log('companies ', companies)
-            profileDetails(companies);
-            
+            profileDetails(companies);  
         },
         error: function (err){
             console.log('Err ', err);
-            //alert('Error loading services');
         }
-
     });
 
     // Upload profile images
@@ -65,12 +62,12 @@
         $div.addClass('edit-input');
     });
 
-// remove edit
+    // remove edit
     $detailSide.delegate('.remove-edit', 'click', function () {
         $(this).closest('.details-side').removeClass('edit-input');
     });
     
-// save edit
+    // save edit
     $detailSide.delegate('.save-edit', 'click', function() {
         var $div = $(this).closest('.details-side');
         var companies = {
@@ -96,11 +93,8 @@
             },
             error: function (err){
                 console.log('Err ', err);
-                //alert('Error loading services');
             }
         });
-
         $(this).closest('.details-side').removeClass('edit-input');
     });
-        
 })();

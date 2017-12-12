@@ -50,8 +50,7 @@
     };
     bookingInfo();
 
-    $('#confirm').on('click',function(){
-        
+    $('#confirm').on('click',function(){    
         $.ajax({
             type: 'POST',
             url: ApiUrl + 'booking',

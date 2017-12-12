@@ -21,13 +21,10 @@
             console.log('bookings ', bookings)
             $.each(bookings, function (i, item){
                renderBooking(item);
-            });
-            
+            });    
         },
         error: function (err){
             console.log('Err ', err);
-            //alert('Error loading services');
         }
-
     });
 })();

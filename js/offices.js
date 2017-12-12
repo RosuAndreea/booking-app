@@ -13,12 +13,12 @@
     //Render the booking details
     $('#select-comp').delegate('#selectOff','click', function() {
         $companyData.append(
-          '<div class="company-booking">'
-          +'<span class = "serv-book-left">Company name: </span>'
-          +'<span class = "serv-book-right">'+ myStore.companyName + "</span>"
-          +'<span class = "serv-book-left">Details: </span>'
-          +'<span class = "serv-book-right">' + myStore.companyDetails + "</span>"
-          +'</div>'
+            '<div class="company-booking">'
+            +'<span class = "serv-book-left">Company name: </span>'
+            +'<span class = "serv-book-right">'+ myStore.companyName + "</span>"
+            +'<span class = "serv-book-left">Details: </span>'
+            +'<span class = "serv-book-right">' + myStore.companyDetails + "</span>"
+            +'</div>'
         );
     });
 
@@ -55,7 +55,7 @@
         window.getServices(id);
     }
  
- // take the data from db/offices
+    // take the data from db/offices
     window.getOffices = function(companyId){
         $.ajax({
             type: "GET",
@@ -63,13 +63,11 @@
             success: function (offices){
                 console.log('offices ', offices)
                 $.each(offices, function (i, office){
-                   renderOffices(office);
-                   
+                   renderOffices(office);                  
                 });
             },
             error: function (err){
                 console.log('Err ', err);
-                 //alert('Error loading offices');
             }
         });
     }
@@ -94,29 +92,27 @@
             +'</tr>'
         );
     }
+
     $.ajax({
         type: "GET",
         url: ApiUrl + 'offices?companyId=' + localStorage.companyId,
         success: function (offices){
             console.log('offices ', offices)
             $.each(offices, function (i, office){
-               addOffice(office); 
+                addOffice(office); 
             });
             $('.offices-data').delegate('.more','click',function(){
                 localStorage.setItem('officeId', $(this).attr('data-id') );
                 document.location = 'services.html'
-
-            });
-            
+            });    
         },
         error: function (err){
             console.log('Err ', err);
-            //alert('Error loading services');
         }
 
     });
 
- // add offices
+    // add offices
     $('.add-btn').on('click',function (){
         var offices = {
             officeName: $offName.val(),
@@ -137,13 +133,11 @@
         });
     });
      
- 
- //    delete offices
+    //delete offices
     $officeData.delegate('.remove-off','click', function(e){
         var $tr = $(this).closest('.offices-data');
         var self = this;
         e.preventDefault();
-        
  
         $.ajax({
             type: 'DELETE',
@@ -155,26 +149,24 @@
                 });
             }
         });
- 
     });   
      
-     // edit office
+    // edit office
     $officeData.delegate('.edit-off','click', function(){
         var $tr = $(this).closest('.offices-data');
         $tr.find('input.off-name').val( $tr.find('span.off-name').html() );
         $tr.find('input.email').val( $tr.find('span.email').html() );
         $tr.find('input.address').val( $tr.find('span.address').html() );
         $tr.find('input.phone').val( $tr.find('span.phone').html() );
-        $tr.addClass('edit-input');
-         
+        $tr.addClass('edit-input');     
     });   
       
-     // remove edit
+    // remove edit
     $officeData.delegate('.remove-edit','click', function(){
         $(this).closest('.offices-data').removeClass('edit-input');
     });  
  
-     // save edit
+    // save edit
     $officeData.delegate('.save-off', 'click', function () {
         var $tr = $(this).closest('.offices-data');
         var offices = {
@@ -183,6 +175,7 @@
             officeAddress: $tr.find('input.address').val(),
             officePhone: $tr.find('input.phone').val()
         };
+        
         $.ajax({
             type: "PUT",
             url: ApiUrl + 'offices/' + $(this).attr('data-id') ,
