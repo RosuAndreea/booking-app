@@ -5,7 +5,7 @@
         $card.append(
             '<div class="col-md-3"><div class="card">'
             +'<div class="view overlay hm-white-slight">'
-            +'<img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%28131%29.jpg" class="img-fluid" alt="">'
+            +'<img src="'+ item.logo +'" class="img-fluid" alt="">'
             +'<a><div class="mask"></div></a></div>'
             +'<div class="card-body">'
             +'<h4 class="card-title">' + item.name + '</h4>'

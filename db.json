@@ -7,6 +7,7 @@
       "address": "Marasesti",
       "phone": "0123456789",
       "details": "test1 fdsvgzd dbvgdfb gfb cf fbngfn gfnb gfcv fnb gfbn cfxbhv ftb bfgtbv cftrhbtfgcv tbn fgtr",
+      "logo": "https://i.pinimg.com/736x/85/20/8a/85208ac03ee10ae5b4b83e2b65431af9--antique-books-old-books.jpg",
       "id": 1
     },
     {
@@ -16,7 +17,7 @@
       "details": "test2",
       "address": "",
       "phone": "",
-      "logo": "",
+      "logo": "http://www.elastic.co/assets/bltada7771f270d08f6/enhanced-buzz-1492-1379411828-15.jpg",
       "id": 2
     },
     {
@@ -26,7 +27,7 @@
       "details": "test3",
       "address": "",
       "phone": "",
-      "logo": "",
+      "logo": "https://static-cdn.123rf.com/images/v5/index-thumbnail/52175178-a.jpg",
       "id": 3
     }
   ],
