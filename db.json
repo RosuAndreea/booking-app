@@ -2,7 +2,7 @@
   "companies": [
     {
       "name": "Company1",
-      "email": "email1@yahoo.com",
+      "email": "company1@yahoo.com",
       "password": "demo",
       "address": "Marasesti",
       "phone": "0123456789",
@@ -12,7 +12,7 @@
     },
     {
       "name": "Company2",
-      "email": "ana@yahoo.com",
+      "email": "company2@yahoo.com",
       "password": "demo",
       "details": "test2",
       "address": "",
@@ -22,13 +22,23 @@
     },
     {
       "name": "Company3",
-      "email": "email@yahoo.com",
+      "email": "company3@yahoo.com",
       "password": "demo",
       "details": "test3",
       "address": "",
       "phone": "",
       "logo": "https://static-cdn.123rf.com/images/v5/index-thumbnail/52175178-a.jpg",
       "id": 3
+    },
+    {
+      "name": "Company4",
+      "email": "company4@yahoo.com",
+      "password": "demo",
+      "details": "fjivos",
+      "address": "",
+      "phone": "",
+      "logo": "../img/img-default.jpg",
+      "id": 4
     }
   ],
   "offices": [

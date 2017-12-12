@@ -121,7 +121,7 @@
             details: $description.val(),
             address:"",
             phone:'',
-            logo:''
+            logo:'../img/img-default.jpg'
         };
 
         $.ajax({

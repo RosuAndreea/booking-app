@@ -1,6 +1,7 @@
 (function (){
     var ApiUrl = window.ApiUrl;
     $detailSide = $('.details-side');
+    $imgSide = $('.upload-side');
 
     function profileDetails(companies) {
         $detailSide.append(
@@ -20,6 +21,9 @@
             +'<i class="fa fa-floppy-o edit-input edit save-edit" aria-hidden="true"></i>'
             +'<i class="fa fa-times edit-input edit remove-edit" data-id="{{id}}" aria-hidden="true"></i></td>'
         );
+        $imgSide.append(
+            '<img src="' + companies.logo + '" class = "company-logo"/>'
+        );
     }
 
     $.ajax({
@@ -27,7 +31,7 @@
         url: ApiUrl + 'companies/' + localStorage.companyId,
         success: function (companies){
             console.log('companies ', companies)
-            profileDetails(companies);  
+            profileDetails(companies);
         },
         error: function (err){
             console.log('Err ', err);
