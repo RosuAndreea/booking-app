@@ -86,7 +86,7 @@
             +'<td><span class="noedit email">' + office.officeEmail + '</span><input class="edit-input email"/></td>'
             +'<td><span class="noedit address">' + office.officeAddress + '</span><input class="edit-input address"/></td>'
             +'<td><span class="noedit phone">' + office.officePhone + '</span><input class="edit-input phone"/></td>'
-            +'<td><span class="noedit view"><a href="services.html"><button class="more">View more</button></a></td>'
+            +'<td><span class="noedit view"><button class="more" data-id="'+ office.id +'">View more</button></span></td>'
             +'<td><i class="fa fa-pencil edit noedit edit-off" aria-hiddesn="true"></i>'
             +'<i class="fa fa-trash edit remove-off" aria-hidden="true"  data-id="'+ office.id +'"></i>'
             +'<i class="fa fa-floppy-o edit-input edit save-off" aria-hidden="true" data-id="'+ office.id +'"></i>'
@@ -100,8 +100,12 @@
         success: function (offices){
             console.log('offices ', offices)
             $.each(offices, function (i, office){
-               addOffice(office);
-               localStorage.setItem('officeId',office.id);
+               addOffice(office); 
+            });
+            $('.offices-data').delegate('.more','click',function(){
+                localStorage.setItem('officeId', $(this).attr('data-id') );
+                document.location = 'services.html'
+
             });
             
         },
@@ -129,9 +133,6 @@
             success: function (newOffice) {
                  addOffice(newOffice);
                  alert('You create a new office with success!');
-            },
-            error: function () {
-                 alert('Error saving the office');
             }
         });
     });

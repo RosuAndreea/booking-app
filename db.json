@@ -69,6 +69,14 @@
       "officePhone": "0123356789",
       "companyId": "2",
       "id": 9
+    },
+    {
+      "officeName": "Office-test11",
+      "officeEmail": "office11@yahoo.com",
+      "officeAddress": "Donici",
+      "officePhone": "0123456789",
+      "companyId": "2",
+      "id": 10
     }
   ],
   "services": [
@@ -89,20 +97,20 @@
       "id": 3
     },
     {
-      "serviceName": "service2",
+      "serviceName": "service1",
       "servicePrice": "22$",
       "serviceTime": "5",
       "serviceDescription": "service2 office 9 comp2",
-      "officeId": "4",
+      "officeId": "9",
       "id": 4
     },
     {
-      "serviceName": "Serv1",
-      "servicePrice": "22$",
+      "serviceName": "service2",
+      "servicePrice": "50E",
       "serviceTime": "40min",
-      "serviceDescription": "service1 office 1 comp2",
+      "serviceDescription": "serv2 description",
       "officeId": "9",
-      "id": 5
+      "id": 6
     }
   ],
   "booking": [
