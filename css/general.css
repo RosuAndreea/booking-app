@@ -236,11 +236,12 @@ table {
 .list-group {
 	width: 30%;
 	margin-bottom: 0px;
+	display: inline-block;
 }
 .office-details {
 	width: 50%;
 	float: right;
-	margin-top: -140px;
+	margin-top: 40px;
 }
 #selectOff {
 	width: 100px;
@@ -398,10 +399,9 @@ table {
 	border-bottom: 1px solid #ccc;
     min-height: 140px;
 }
-.customer-booking {
-	float: left;
-	padding-bottom: 20px;
-	margin: 0 25% 0 0;
+.customer-details {
+	margin-bottom: 40px;
+	margin-left: 120px;
 }
 /* Validation */
 .form_text {

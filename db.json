@@ -77,6 +77,14 @@
       "officePhone": "0123456789",
       "companyId": "2",
       "id": 10
+    },
+    {
+      "officeName": "office1-3",
+      "officeEmail": "office1-3@yahoo.com",
+      "officeAddress": "office1-3@yahoo.com",
+      "officePhone": "0123456789",
+      "companyId": "1",
+      "id": 11
     }
   ],
   "services": [
@@ -155,6 +163,27 @@
       "customerEmail": "customer1@yahoo.com",
       "customerPhone": "0123456789",
       "id": 3
+    },
+    {
+      "companyId": "2",
+      "companyName": "Company2",
+      "companyDetails": "test2",
+      "officeId": "9",
+      "officeEmail": "email10@yahoo.com",
+      "officeAddress": "bucuresti",
+      "officePhone": "0123356789",
+      "officeName": "Office-test10",
+      "serviceId": "6",
+      "serviceName": "service2",
+      "servicePrice": "50E",
+      "serviceDescription": "serv2 description",
+      "serviceTime": "40min",
+      "data": "03/08/2018 - 03/10/2018",
+      "customerFname": "customer",
+      "customerLname": "1",
+      "customerEmail": "customer1@yahoo.com",
+      "customerPhone": "9876543210",
+      "id": 4
     }
   ]
 }

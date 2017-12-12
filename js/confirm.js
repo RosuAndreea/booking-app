@@ -27,14 +27,12 @@
             +'</div>'
         );
         $customerConfirm.append(
-            '<div class="customer-booking">'
-            +'<span class = "serv-book-left">Name: </span>'
+            '<span class = "serv-book-left">Name: </span>'
             +'<span class = "serv-book-right">'+ myStore.customerFname + " " + myStore.customerLname + "</span>"
             +'<span class = "serv-book-left">Email: </span>'
             +'<span class = "serv-book-right">' + myStore.customerEmail + "</span>"
             +'<span class = "serv-book-left">Phone: </span>'
-            +'<span class = "serv-book-right">' + myStore.customerPhone + "</span>"
-            +'</div>'
+            +'<span class = "serv-book-right">' + myStore.customerPhone + "</span>" 
         );
     });;
 })();
